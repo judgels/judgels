@@ -1,0 +1,27 @@
+[submodule "judgels-uriel"]
+	path = judgels-uriel
+	url = https://github.com/ia-toki/judgels-uriel.git
+[submodule "judgels-sandalphon"]
+	path = judgels-sandalphon
+	url = https://github.com/ia-toki/judgels-sandalphon.git
+[submodule "judgels-jophiel"]
+	path = judgels-jophiel
+	url = https://github.com/ia-toki/judgels-jophiel.git
+[submodule "judgels-play-commons"]
+	path = judgels-play-commons
+	url = https://github.com/ia-toki/judgels-play-commons.git
+[submodule "judgels-sealtiel-message"]
+	path = judgels-sealtiel-message
+	url = https://github.com/ia-toki/judgels-sealtiel-message.git
+[submodule "judgels-gabriel-commons"]
+	path = judgels-gabriel-commons
+	url = https://github.com/ia-toki/judgels-gabriel-commons.git
+[submodule "judgels-gabriel"]
+	path = judgels-gabriel
+	url = https://github.com/ia-toki/judgels-gabriel.git
+[submodule "judgels-sealtiel"]
+	path = judgels-sealtiel
+	url = https://github.com/ia-toki/judgels-sealtiel.git
+[submodule "judgels-frontend-commons"]
+	path = judgels-frontend-commons
+	url = https://github.com/ia-toki/judgels-frontend-commons.git

@@ -1,0 +1,19 @@
+We acknowledge the following people for contributing to judgels.
+
+Main Authors (have the rights to "PUSH" on git repository)
+Ashar Fuadi <fushar@gmail.com>
+Jordan Fernando <fernandojordan.92@gmail.com>
+
+Other Contributors
+
+Adi Mulyanto
+Arief Widhiyasa
+Brian Marshal
+Derianto Kusuma
+Inggriani Liem
+Petra Barus
+Suryana Setiawan
+Vincent Sebastian The
+William Gozali
+
+And many others people that provide useful comments, suggestions, and feedbacks.
