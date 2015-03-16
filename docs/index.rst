@@ -1,16 +1,19 @@
-.. judgels documentation master file, created by
-   sphinx-quickstart on Thu Mar  5 16:42:10 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to judgels's documentation!
+Welcome to Judgels' documentation!
 ===================================
 
 .. toctree::
    :maxdepth: 2
 
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Introduction.rst
+   SetUp.rst
+   SingleSignOn.rst
+   ProgrammingRepository.rst
+   ProblemTypes.rst
+   MessageOrientedMiddleware.rst
+   Grader.rst
+   CompetitionGate.rst
+   ContestTypes.rst
+   Troubleshooting.rst
+   Development.rst
+   FutureTarget.rst
 
