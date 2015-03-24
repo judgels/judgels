@@ -43,3 +43,6 @@
 	url = https://github.com/ia-toki/judgels-frontend-commons.git
   branch = master
 
+[submodule "judgels-moe"]
+	path = judgels-moe
+	url = https://github.com/ia-toki/judgels-moe.git
