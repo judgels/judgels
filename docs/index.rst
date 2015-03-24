@@ -5,15 +5,15 @@ Welcome to Judgels' documentation!
    :maxdepth: 2
 
    Introduction.rst
-   SetUp.rst
-   SingleSignOn.rst
-   ProgrammingRepository.rst
+   Setupp.rst
+   Jophiel.rst
+   Sandalphon.rst
    ProblemTypes.rst
-   MessageOrientedMiddleware.rst
-   Grader.rst
-   CompetitionGate.rst
+   Sealtiel.rst
+   Gabriel.rst
+   Uriel.rst
    ContestTypes.rst
    Troubleshooting.rst
-   Development.rst
-   FutureTarget.rst
+   DevelopersGuide.rst
+   FutureTargets.rst
 

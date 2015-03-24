@@ -13,12 +13,14 @@ Gabriel need to connect to Sealtiel to fetch grading requests. You need to confi
 
 Gabriel need to connect to Sandalphon to fetch problem evaluator files (testcases, subtask configuration, constraints, checkers, etc). You need to configure the parameter in "src/main/resources/conf/application.conf" file.
 
-Gabriel depends on judgels-gabriel-commons to run, make sure judgels-gabriel-commons is on the same level of directory with Gabriel.
+Next, you have to configure Moe. Run ./configure and make in judgels-moe repository. Gabriel uses Moe to grade submissions. You need to configure the parameter in "src/main/resources/conf/application.conf" file.
+
+Gabriel depends on judgels-moe and judgels-gabriel-commons to run, make sure they are on the same level of directory with Gabriel.
 
 Running Gabriel
 ===============
 
-You can run Gabriel by using "sbt" command to enter sbt console and enter "run" command in the console. 
+You can run Gabriel by using "sbt" command to enter sbt console and enter "run" command in the console.
 
 Grading Engine
 ==============

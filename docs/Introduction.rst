@@ -1,33 +1,44 @@
 Introduction
 ************
 
-Judgels (Judgment Angels) is a software to conduct any events related to programming education such as programming contests, programming classes, online judge, etc. It was build as a set of distributed applications by Indonesia Informatics Olympiad Team (Ikatan Alumni Tim Olimpiad Komputer Indonesia). Judgels is designed to be extensible, adaptable, and modular so that it can be used in any events related to programming education.
+**Judgels** (**Judgment Angels**) is an open source, distributed, multi-application software for educative programming events, such as:
 
-Judgels is still in development and does not have stable release yet. However anyone can see and use the source codes on `github <https://github.com/ia-toki/judgels>`_ at their own risks.
+- competitive programming contests,
+- academic programming classes/courses,
+- online judge/problems archive,
+- etc.
 
-System Structure
-================
+It was initiated by `Ikatan Alumni Tim Olimpiade Komputer Indonesia <http://blog.ia-toki.org/>`_ (English: Indonesia Computing Olympiad Alumni Association). Judgels is designed to be extensible, adaptable, and modular in the hope that it can be easily modified for any educative programming related purposes in the future.
 
-Judgels is separated of several applications based on concerns. Each application can run on different machines and connects to each others. 
-
-Each application are independent to do their own functions but there are dependencies in other functions. Each application have their own data stored in MySQL database so that if a application is not working properly, the administrator can replace it with an identical one (without moving the data).
-
+Judgels is still is being heavily developed and does not have any stable releases yet. However, anyone can view and use the codebase on `GitHub <https://github.com/ia-toki/judgels>`_ at own risks.
 
 Applications
 ============
 
-Judgels applications is codenamed using angels' names.
-The judgels applications are:
+Judgels consists of several applications that work with each other. Each application has a codename after a Greek archangel name.
 
-- Single Sign On Application (`jophiel <https://github.com/ia-toki/judgels-jophiel>`_): authenticate and authorize users;
+At the moment, there are five applications in Judgels:
 
-- Programming Resource Repository Application (`sandalphon <https://github.com/ia-toki/judgels-sandalphon>`_): the application that the problem and material writers will be interacting with;
+#. Single Sign-On (**Jophiel**): authenticating and authorizing users.
 
-- Competition Gate Application (`uriel <https://github.com/ia-toki/judgels-uriel>`_): the application that provide gateway for contestants to interact with and for manager to control and modify contests' parameters;
+#. Repository Gate (**Sandalphon**): storing programming problems and materials.
 
-- Middleware Application (`sealtiel <https://github.com/ia-toki/judgels-sealtiel>`_); the application that provide messages transmissions using queues (is used for queueing submissions to be evaluated);
+#. Competition Gate (**Uriel**): holding programming contests.
 
-- Grader Application (`gabriel <https://github.com/ia-toki/judgels-gabriel>`_); the application that grades submissions.
+#. Middleware (**Sealtiel**): providing message queues and transmissions between applications.;
 
-At the current moment there are only 5 applications, we are still working on other applications to support programming courses and online judges. Each applications can be run on multiple machines to ensure scalability. Some applications share commons to reduce duplication of codes.
+#. Grader Application (**Gabriel**): grading programming submissions.
 
+All applications don't have to be installed in one machine. We can install an application in one machine and the others in other machines. This ensures good scalability.
+
+We are still working on other applications for programming courses and online judges.
+
+License
+=======
+
+Judgels is licensed using GNU GPL version 2.
+
+Contributions
+=============
+
+Currently, the project is maintained by (in alphabetical order) **Ashar Fuadi** and **Jordan Fernando**. Public contributions are welcome. Please consult the Developer's Guide on how Judgels works in details.
