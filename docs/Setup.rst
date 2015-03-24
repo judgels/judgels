@@ -39,7 +39,7 @@ Gabriel
 Installation
 ------------
 
-To install judgels, you need to clone the latest version of judgels from `GitHub <https://github.com/ia-toki/judgels>`_ and run "git submodule update --init" to clone all of its' submodules.
+To install judgels, you need to clone the latest version of judgels from `GitHub <https://github.com/ia-toki/judgels>`_ and run "scripts/pull-latest.sh" to clone all of its' submodules.
 
 After cloning judgels from GitHub, you can run each applications from their directory by executing "activator" or "sbt" (only for gabriel and gabriel-commons). From the submodules, the directories with suffix "_commons" are to reduce codes duplication. Please refer to `Play Framework <http://www.playframework.com/>`_ and `SBT <http://www.scala-sbt.org/>`_ documentation to run the applications.
 
