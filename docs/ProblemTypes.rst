@@ -47,10 +47,12 @@ Checker
 
 In blackbox grading, sometimes there are problems with special conditions. Some of the special conditions are multiple correct answers and floating point precission. This can be solved by providing checker. A checker is a program that checks provided input, user solution's output with expected output and check if the solution is correct or not.
 
+Documentation about making checker is described later in this document.
+
 Problem Types
 =============
 
-Therea re three types of programming problem:
+There are three types of programming problem:
 
 1. Batch
 --------
@@ -73,3 +75,27 @@ Therea re three types of programming problem:
 
    In interactive problem type, user need to submit a solution that interact with another program.
 
+Creating Checker
+================
+
+1. Batch Problem
+----------------
+   Create a program using supported programming language which takes 3 arguments according to this order: inputFilename, keyOutputFilename, and contestantOutputFilename. Your program can open those files, read the content, and do the judging.
+
+   To report the judging result, print one of the following option to stdout:
+
+   1. A line containing "AC", indicating the output from contestant produces correct answer for the particular test case.
+   2. A line containing "WA", indicating the output from contestant produces wrong answer for the particular test case.
+   3. A line containing "OK", followed by a line containing a number X, indicating the output from contestant produces answer which scores X for the particular test case. This number can be a real value.
+
+2. Interactive Problem
+----------------------
+   Simply create a program using supported programming language which takes 1 argument: inputFilename. Your program can open that files, read the content, and do the judging. Contestant's output will be your stdin, and your stdout will be contestant's stdin.
+
+   Don't forget to flush your stdout after printing some output. This is required to ensure the output is delivered immediately to contestant's stdin. 
+
+   To report the judging result, print one of the following option to stderr:
+
+   1. A line containing "AC", indicating the output from contestant produces correct answer for the particular test case.
+   2. A line containing "WA", indicating the output from contestant produces wrong answer for the particular test case.
+   3. A line containing "OK", followed by a line containing a number X, indicating the output from contestant produces answer which scores X for the particular test case. This number can be a real value.
