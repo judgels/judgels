@@ -136,6 +136,9 @@ function release-judgels()
 		git tag -a v$1 -m "Version $1"
 		git push --tags origin master 
 	done
+	cd $baseDir"/judgels"
+	git tag -a v$1 -m "Version $1"
+	git push --tags origin master 
 }
 
 judgels-status
