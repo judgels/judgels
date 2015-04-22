@@ -27,7 +27,7 @@ judgelsrepositories=(
 
 total=${#judgelsapplications[*]}
 totalrepo=${#judgelsrepositories[*]}
-baseDir=/var/judgels
+baseDir=/Users/dronjax/Projects/github/judgels
 
 # no param
 function judgels-status()
@@ -132,6 +132,7 @@ function release-judgels()
 	do
 		cd $baseDir"/judgels-${judgelsrepositories[$i]}"
 		echo $1 > version.properties
+		git add version.properties
 		git commit -m "Bump Version $1"
 		git tag -a v$1 -m "Version $1"
 		git push --tags origin master 
