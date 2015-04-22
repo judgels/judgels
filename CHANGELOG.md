@@ -1,4 +1,38 @@
-# Change Log
+# Change Logs
+
+## [0.3.0] - 2015-04-23
+
+### Overall
+
+#### Added
+- Improve build.sbt file in each project.
+- Add script to release new judgels version.
+- Show used version on running applications.
+
+#### Fixed
+- Standardize content headers, breadcrumbs, and other contents.
+- Mark most properties in Class as final.
+
+### Jophiel
+
+#### Fixed
+- Fix activity log pagination.
+- Export private key in id token usage to configuration.
+- Change access token expiration from 1 day into just 5 minutes.
+
+### Uriel
+
+#### Added
+- Add submission tester to test load.
+
+#### Fixed
+- Fix CSRF token.
+
+### Sealtiel
+
+#### Fixed
+- Fix large message handling.
+
 
 ## [0.2.1] - 2015-04-14
 
