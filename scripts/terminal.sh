@@ -142,4 +142,18 @@ function release-judgels()
 	git push --tags origin master 
 }
 
+# param: version
+function unrelease-judgels()
+{
+	for (( i=0; i<=$(( $totalrepo -1 )); i++ ))
+	do
+		cd $baseDir"/judgels-${judgelsrepositories[$i]}"
+		git tag -d v$1
+		git push origin :refs/tags/v$1
+	done
+	cd $baseDir"/judgels"
+	git tag -d v$1
+	git push origin :refs/tags/v$1
+}
+
 judgels-status
