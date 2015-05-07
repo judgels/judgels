@@ -1,10 +1,11 @@
 #!bin/bash
 
 judgelsapplications=(
-	'sealtiel' 
-	'jophiel' 
-	'sandalphon' 
+	'sealtiel'
+	'jophiel'
+	'sandalphon'
 	'uriel'
+	'michael'
 )
 
 judgelscolors=(
@@ -12,6 +13,7 @@ judgelscolors=(
 	'\033[32m'
 	'\033[33m'
 	'\033[34m'
+	'\033[35m'
 )
 
 judgelsrepositories=(
@@ -23,6 +25,7 @@ judgelsrepositories=(
 	'jophiel'
 	'sandalphon'
 	'uriel'
+	'michael'
 )
 
 total=${#judgelsapplications[*]}
@@ -40,10 +43,10 @@ function judgels-status()
 	for (( i=0; i<=$(( $total -1 )); i++ ))
 	do
 		let "j = i + 1"
-		if [ -f $baseDir"/dist/judgels-${judgelsapplications[$i]}.pid" ] && [ -d "/proc/$(<$baseDir"/dist/judgels-${judgelsapplications[$i]}.pid")" ] 
+		if [ -f $baseDir"/dist/judgels-${judgelsapplications[$i]}.pid" ] && [ -d "/proc/$(<$baseDir"/dist/judgels-${judgelsapplications[$i]}.pid")" ]
 		then
 	    	echo -e "${judgelscolors[$i]}$j.judgels-${judgelsapplications[$i]} is RUNNING.\e[0m"
-		else 
+		else
 			echo -e "${judgelscolors[$i]}$j.judgels-${judgelsapplications[$i]} is STOPPED.\e[0m"
 		fi
 	done
@@ -106,7 +109,7 @@ function publish-judgels-app()
 # param: appName
 function kill-judgels-app()
 {
-	if [ -f $baseDir"/dist/judgels-$1.pid" ] && [ -d "/proc/$(<$baseDir"/dist/judgels-$1.pid")" ] 
+	if [ -f $baseDir"/dist/judgels-$1.pid" ] && [ -d "/proc/$(<$baseDir"/dist/judgels-$1.pid")" ]
 	then
 		kill -9 $(<$baseDir"/dist/judgels-$1.pid")
 		rm $baseDir"/dist/judgels-$1.pid"
@@ -135,11 +138,11 @@ function release-judgels()
 		git add version.properties
 		git commit -m "Bump Version $1"
 		git tag -a v$1 -m "Version $1"
-		git push --tags origin master 
+		git push --tags origin master
 	done
 	cd $baseDir"/judgels"
 	git tag -a v$1 -m "Version $1"
-	git push --tags origin master 
+	git push --tags origin master
 }
 
 # param: version

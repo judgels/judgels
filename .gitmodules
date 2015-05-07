@@ -38,6 +38,11 @@
 	url = https://github.com/ia-toki/judgels-sealtiel.git
   branch = master
 
+[submodule "judgels-michael"]
+	path = judgels-michael
+	url = https://github.com/ia-toki/judgels-michael.git
+  branch = master
+
 [submodule "judgels-frontend-commons"]
 	path = judgels-frontend-commons
 	url = https://github.com/ia-toki/judgels-frontend-commons.git
