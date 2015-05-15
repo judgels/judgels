@@ -1,5 +1,71 @@
 # Change Logs
 
+## [0.4.0] - 2015-05-08
+
+### Overall
+
+#### Added
+- Make the top left logo clickable and pointing to homepage.
+- Make admin can view applications as any user.
+- Add regex for restricting entity IDs to valid integers in routes.
+- Add guard in controllers (as page not found) if they try to load non-existing entities.
+- Applications check to Jophiel whether the session is still valid for current user.
+- Support HTTPS routing.
+
+#### Fixed
+- Tidy up Global.java configuration schema.
+
+### Jophiel
+
+#### Added
+- Show list of unverified users and add option to resend activation emails.
+- Implement manually activate users.
+
+#### Fixed
+- Fix error message when a not verified user tries to log in.
+- Change time expiry access token into 5 minutes.
+
+### Sandalphon
+
+#### Added
+- Add support for closing and not using problems in contests.
+
+#### Fixed
+- Fix bug when updating working copy when there are already other's commits.
+- Use additionalNote as search parameter in problems list.
+
+### Uriel
+
+#### Added
+- In scoreboard, differentiate between 0 points and no submissions at all.
+- Use local file system as backup for AWS S3 for submission files.
+- Add functionality to provide/upload files in contest.
+- Implement "critical" contests: contests in which submission slot is always present,
+  to avoid statement that is not showing.
+- Implement adding team members and team coaches by text files.
+
+#### Fixed
+- Sort contest lists based on contest start times descending.
+- After clicking tabs, supervisors should be redirected to supervisor subtabs if applicable.
+- Fix filtering in contestant submissions list.
+- Fix error message when adding team contestants that are already team members.
+- Fix adding user as coach that is already a coach.
+
+### Gabriel
+
+#### Added
+- Implement interactive grading engine.
+- Add command-line option to specify the number of desired threads manually.
+
+### Michael
+
+#### Added
+- Implement adding applications.
+- Implement adding machines.
+- Implement adding dashboards.
+- Implement adding operations.
+
+
 ## [0.3.0] - 2015-04-23
 
 ### Overall
