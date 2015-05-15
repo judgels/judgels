@@ -1,5 +1,42 @@
 # Change Logs
 
+## [0.5.0] - 2015-05-15
+
+### Overall
+
+#### Added
+- Add Google analytics.
+- Add show full screen and hide sidebar button.
+
+#### Fixed
+- Prevent JVM from exiting if Akka fails.
+- Fix file inside folder zipped in Windows not extracted correctly when opened in Linux.
+
+### Jophiel
+
+#### Fixed
+- Fix cannot create default avatar when starting Jophiel.
+
+### Sandalphon
+
+#### Fixed
+- Fix discard user clone bug in Windows.
+
+### Uriel
+
+#### Added
+- Implement simple scoreboard fetch REST API for external viewer.
+- Implement contest password for onsite contests.
+
+#### Fixed
+- Simplify look-and-feel for contests list.
+- Fix cannot create default team avatar when starting Uriel.
+
+### Gabriel
+
+#### Fixed
+- Add timeout to all connections to Sandalphon.
+
 ## [0.4.0] - 2015-05-08
 
 ### Overall
