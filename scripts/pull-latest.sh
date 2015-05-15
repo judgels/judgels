@@ -7,5 +7,5 @@ echo "Fetching submodules..."
 git submodule update --remote
 
 echo "Updating submodules..."
-git submodule foreach -q --recursive git pull origin master
+git submodule foreach -q --recursive git pull origin master && git checkout master
 
