@@ -18,9 +18,9 @@
 	url = https://github.com/ia-toki/judgels-play-commons.git
   branch = master
 
-[submodule "judgels-sealtiel-message"]
-	path = judgels-sealtiel-message
-	url = https://github.com/ia-toki/judgels-sealtiel-message.git
+[submodule "judgels-sealtiel-commons"]
+	path = judgels-sealtiel-commons
+	url = https://github.com/ia-toki/judgels-sealtiel-commons.git
   branch = master
 
 [submodule "judgels-gabriel-commons"]
