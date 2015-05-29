@@ -4,7 +4,7 @@ Welcome to Judgels' documentation!
 .. toctree::
    :maxdepth: 2
 
-   Introduction.rst
+   introduction.rst
    Setup.rst
    Jophiel.rst
    Sandalphon.rst
