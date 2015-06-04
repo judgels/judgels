@@ -5,7 +5,7 @@ Welcome to Judgels' documentation!
    :maxdepth: 2
 
    introduction.rst
-   Setup.rst
+   setup.rst
    Jophiel.rst
    Sandalphon.rst
    ProblemTypes.rst
