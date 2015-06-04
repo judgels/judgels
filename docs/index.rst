@@ -10,7 +10,7 @@ Welcome to Judgels' documentation!
    Sandalphon.rst
    ProblemTypes.rst
    Sealtiel.rst
-   Gabriel.rst
+   gabriel.rst
    Uriel.rst
    ContestTypes.rst
    Troubleshooting.rst
