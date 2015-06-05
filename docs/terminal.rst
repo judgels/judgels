@@ -42,8 +42,12 @@ judgels kill <app>
 judgels pull <repo>
     Pulls changes from the repository <repo> and all its dependencies, using :code:`--rebase` strategy. If any of the repository or its dependencies is not present, it will be cloned.
 
+    <repo> can be :code:`--all`; this will pull/clone all Judgels repositories.
+
 judgels push <repo>
     Pushes changes from the repository <repo> and all its dependencies.
+
+    <repo> can be :code:`--all`; this will push all Judgels repositories.
 
 judgels release <version>
     Bumps a new version for all Judgels repositories. For Judgels admins only.
