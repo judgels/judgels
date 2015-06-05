@@ -18,13 +18,13 @@ Judgels consists of several applications that work with each other. Each applica
 
 At the moment, there are seven applications in Judgels:
 
-#. Single Sign-On (**Jophiel**): authenticates and authorizes users in other applications.
-#. Repository Gate (**Sandalphon**): stores programming problems and lessons.
-#. Competition Gate (**Uriel**): holds programming contests.
-#. Training Gate (**Jerahmeel**): holds programming training and provides problem archive.
-#. Alchemy Gate (**Michael**): monitors machines used for other applications.
-#. Message Gate (**Sealtiel**): provides message queues and transmissions between applications.
-#. Grader (**Gabriel**): grades programming submissions.
+#. **Jophiel** (Single Sign-On) : authenticates and authorizes users in other applications.
+#. **Sandalphon** (Repository Gate): stores programming problems and lessons.
+#. **Sealtiel** (Message Gate): provides message queues and transmissions between applications.
+#. **Uriel** (Competition Gate): holds programming contests.
+#. **Michael** (Alchemy Gate): monitors machines used for other applications.
+#. **Jerahmeel** (Training Gate): holds programming training and provides problem archive.
+#. **Gabriel** (Grader): grades programming submissions.
 
 The applications are designed to be modular. For example, multiple instances of Uriel can share the same Sandalphon and Jophiel instance. They are also designed to be distributed: the required application instances do not have to be installed in one single machine. We can install one application in one machine and some others in other machines.
 
