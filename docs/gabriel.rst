@@ -31,6 +31,12 @@ First, follow the :ref:`main Judgels setup <setup>` if you haven't. Then, instal
 
 This will clone Gabriel and Moe repositories to your Judgels base directory. Next, we will need to build the Moe sandbox program.
 
+.. note::
+
+    The next three sections (Moe, control groups, quota) can be skipped if you plan to install Moe later. Just comment out the keys **moe.{isolatePath, iwrapperPath}** in the configuration. Gabriel can still run but the contestants' programs will not be sandboxed (which is dangerous).
+
+    This can be useful if you want to test Gabriel's connection with the other applications first.
+
 Building Moe
 ************
 
