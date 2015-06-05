@@ -1,29 +1,44 @@
-# Judgment Angels (judgels)
+# Judgment Angels
 
 ## Introduction
-Judgels is full stack distributed system for programming education purposes.
-Judgels consists of several applications which provide certain functions and services:
 
-- [Jophiel (Single Sign On)](https://github.com/ia-toki/judgels-jophiel)
+**Judgels** (**Judgment Angels**) is a set of modular applications for educational programming purposes. It was initiated by [Ikatan Alumni Tim Olimpiade Komputer Indonesia](http://blog.ia-toki.org/) (English: Indonesia Computing Olympiad Alumni Association). It is designed to support:
 
-- [Sandalphon (Programming Resources Repository)](https://github.com/ia-toki/judgels-sandalphon)
+- competitive programming contests,
+- competitive programming problem archive,
+- academic programming classes,
+- programming training courses,
+- etc.
 
-- [Uriel (Competition Gate)](https://github.com/ia-toki/judgels-uriel)
+### Applications
 
-- [Sealtiel (Middleware)](https://github.com/ia-toki/judgels-sealtiel)
+Judgels consists of several applications that work with each other. Each application has a codename after a Greek archangel name.
 
-- [Gabriel (Grader)](https://github.com/ia-toki/judgels-gabriel)
+At the moment, there are seven applications in Judgels. Each of them has their own repository.
 
-Judgels has been designed to support many types of contests and problems. Judgels is also targeted to be used in the 2015 Asia Pacific International Olympiad, held by Indonesia.
+1. **Jophiel** (Single Sign-On) : authenticates and authorizes users in other applications.
+1. **Sandalphon** (Repository Gate): stores programming problems and lessons.
+1. **Sealtiel** (Message Gate): provides message queues and transmissions between applications.
+1. **Uriel** (Competition Gate): holds programming contests.
+1. **Michael** (Alchemy Gate): monitors machines used for other applications.
+1. **Jerahmeel** (Training Gate): holds programming training and provides problem archive.
+1. **Gabriel** (Grader): grades programming submissions.
 
-## Usage
-Judgels currently is in beta version and has not been released yet. To use Judgels, anyone can just clone the git repository and setup the configuration in their own local machines.
-The git repository is intended for everyone interested in contributing or seeing how the code works.
+The applications are designed to be modular. For example, multiple instances of Uriel can share the same Sandalphon and Jophiel instance. They are also designed to be distributed: the required application instances do not have to be installed in one single machine. We can install one application in one machine and some others in other machines.
 
-We currently have set up an online version of Uriel [http://competition.ia-toki.org](http://competition.ia-toki.org). **Note: [http://competition.ia-toki.org](http://competition.ia-toki.org) is not always online at the moment.**
+Judgels applications are still being heavily developed and do not have any stable releases yet. Anyone can try at their own risks.
 
-## Support
-We are currently still working on the documentation of Judgels. Stay tuned, we will provide the link soon.
+### License
 
-If you have any comments, suggestions, or feedbacks, please let us know through the issues on GitHub.
+Judgels is licensed using GNU GPL version 2.
 
+### Documentation
+
+For installation instruction, please visit [http://judgels.readthedocs.org](http://judgels.readthedocs.org).
+
+### Maintainers
+
+Judgels repositories are currently being maintained by:
+
+- [@dragoon20](https://github.com/dragoon20) (Jordan Fernando)
+- [@fushar](https://github.com/fushar) (Ashar Fuadi)
