@@ -48,4 +48,6 @@ Now, you can install Judgels applications, using the command **judgels pull <app
 
     judgels pull jophiel
 
+(More information about this command-line tool can be found in :ref:`here <terminal>`.)
+
 Finally, follow the installation steps of the application in the respective application page.

@@ -6,6 +6,7 @@ Welcome to Judgels' documentation!
 
    introduction
    setup
+   terminal
    Jophiel
    Sandalphon
    ProblemTypes
