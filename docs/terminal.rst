@@ -45,7 +45,7 @@ judgels pull <repo>
 judgels push <repo>
     Pushes changes from the repository <repo> and all its dependencies.
 
-judgels release <repo>
+judgels release <version>
     Bumps a new version for all Judgels repositories. For Judgels admins only.
 
 judgels run <app> [ <port> ]
