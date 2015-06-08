@@ -7,7 +7,7 @@ Welcome to Judgels' documentation!
    introduction
    setup
    terminal
-   Jophiel
+   jophiel
    Sandalphon
    ProblemTypes
    Sealtiel
