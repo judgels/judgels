@@ -9,3 +9,4 @@ Jophiel uses OpenID Connect protocol.
    :maxdepth: 2
 
    jophiel_setup
+   jophiel_manual
