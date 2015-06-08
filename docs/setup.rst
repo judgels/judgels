@@ -47,7 +47,7 @@ More information about this command-line tool can be found here: :ref:`Command-l
 Installing database
 -------------------
 
-Except Gabriel, all Judgels applications requires a connection a working MySQL database server. Install a MySQL server. Then, create a database named **judgels_<app>** (note the underscore, not dash) for each Judgels application <app> you want to install. For example: **judgels_jophiel**.
+All Judgels Play applications requires a connection a working MySQL database server. Install a MySQL server. Then, create a database named **judgels_<app>** (note the underscore, not dash) for each Judgels Play application <app> you want to install. For example: **judgels_jophiel**.
 
 Installing application
 ----------------------
