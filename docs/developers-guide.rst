@@ -7,3 +7,4 @@ As Judgels is open source, we recommend anyone to contribute to Judgels developm
    :maxdepth: 2
 
    developers-guide_concepts
+   developers-guide_docs
