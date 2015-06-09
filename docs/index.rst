@@ -15,5 +15,5 @@ Welcome to Judgels' documentation!
    Uriel
    ContestTypes
    Troubleshooting
-   DevelopersGuide
+   developers_guide
    FutureTargets
