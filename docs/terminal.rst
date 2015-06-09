@@ -65,7 +65,7 @@ judgels run <app> [ <port> ]
     - jerahmeel: 9006
 
 judgels start <app> <version> [ <port> ]
-    Starts the application from the standalone distribution created using :code:`judgels dist` command. This is equivalent to running :code:`./activator start [ -Dhttp.port=<port> ]` in <repo>. The Judgels application version must be specified. The default ports are the same as above.
+    Starts the application from the standalone distribution created using :code:`judgels dist` command. This is equivalent to running the standalone executable on the specified port. The Judgels application version must be specified. The default ports are the same as above.
 
 judgels start-https <app> <version> [ <port> ]
     Same as above, but using HTTPS.
