@@ -6,4 +6,4 @@ As Judgels is open source, we recommend anyone to contribute to Judgels developm
 .. toctree::
    :maxdepth: 2
 
-   developers_guide_concepts
+   developers-guide_concepts

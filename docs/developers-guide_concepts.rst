@@ -1,7 +1,7 @@
-Basic Concepts
+Basic concepts
 ==============
 
-This section will explain the very basic concepts of Judgels project.
+This section will explain the basic concepts of Judgels codebase.
 
 Technology stack
 ----------------
@@ -13,11 +13,14 @@ Language
 Framework
     `Play Framework 2.3.7 (Java) <https://www.playframework.com>`_ for Judgels Play applications.
 
+Template engine
+    `Twirl <https://www.playframework.com/documentation/2.3.x/ScalaTemplates>`_ for Judgels Play applications.
+
 Database
     `MySQL <https://www.mysql.com>`_ for Judgels Play applications.
 
 ORM
-    `Hibernate <http://hibernate.org/orm/>`_ for Judgels Play applications.
+    `JPA (Java Persistence API) <http://en.wikipedia.org/wiki/Java_Persistence_API>`_ implemented with `Hibernate <http://hibernate.org/orm/>`_ for Judgels Play applications.
 
 Build system
     `SBT <http://www.scala-sbt.org>`_, wrapped in `Typesafe Activator <https://www.typesafe.com/community/core-tools/activator-and-sbt>`_.
