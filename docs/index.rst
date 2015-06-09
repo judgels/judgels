@@ -10,7 +10,7 @@ Welcome to Judgels' documentation!
    jophiel
    Sandalphon
    ProblemTypes
-   Sealtiel
+   sealtiel
    gabriel
    Uriel
    ContestTypes
