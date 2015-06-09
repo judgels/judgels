@@ -97,3 +97,16 @@ It will be easier to explain with a diagram. Suppose that a user wants to change
 
 #. The controller returns an HTTP response to the user. The user is then able to fill the form for changing his profile. The flow finishes.
 
+Database design
+---------------
+
+Judgels adapts the database design explained here: `Phabricator Database Schema <https://secure.phabricator.com/book/phabcontrib/article/database/>`_. Some highlights:
+
+- Each object in Judgels has a **JID** (Judgels ID) in the form of **JID-XXX-YYYYYYYYYYYYYYYYYYYY**, where X is object type code and Y is a shortened UUID.
+- No foreign keys, since we want that objects can be transferred between Judgels applications. For example, we may want to create a set of Judgels instance for OSN, and then transfer the problems back to the central repository.
+- Properties that are not to be queried and have complex structure, are stored either in harddisk or in database as JSON strings.
+
+Additionally, each object has the following fields:
+
+- userCreate, timeCreate, ipCreate: user, time, and IP when this object is created.
+- userUpdate, timeUpdate, ipUpdate: user, time, and IP when this object is updated.
