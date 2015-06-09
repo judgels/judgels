@@ -70,12 +70,6 @@ If RabbitMQ was installed correctly, this will be output: ::
 Running Sealtiel
 ----------------
 
-Sealtiel can be run by running
-
-.. sourcecode:: bash
-
-    judgels run sealtiel
-
-You can open Sealtiel by opening **http://localhost:9003** on your web browser.
+See :ref:`Running Judgels Play applications <play_run>`.
 
 To check whether Sealtiel can connect to RabbitMQ, choose the **Connection** menu in Sealtiel's left sidebar. The connection status will be shown.

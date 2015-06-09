@@ -115,3 +115,60 @@ user
 
 password
     Database's password.
+
+.. _play_run:
+
+Running Judgels Play applications
+---------------------------------
+
+Modes
+*****
+
+After the installation and configuration, we can run Judgels play applications in two modes:
+
+Development mode
+    Run the :code:`judgels run <app>` command. This mode is intended for development environment. Classes will be automatically recompiled if there are changes in the corresponding source files, without having to restart the application.
+
+Production mode
+    Run the :code:`judgels dist <app>` and then :code:`judgels start <app> <version>` commands. Intended for production environment.
+
+Setting Nginx reverse proxy
+***************************
+
+The URLs like http://localhost:900x are ugly. We can set up nice domain names using Nginx reverse proxy.
+
+#. Install Nginx.
+#. Set up virtual hosts. Assume that we want to set up Jophiel. Create a file named **jophiel** in **/etc/nginx/sites-available/** with this content: ::
+
+       server {
+           listen 80;
+           server_name jophiel.judgels.local;
+
+           location / {
+               proxy_pass              http://localhost:9001;
+               proxy_set_header        Host $host;
+               proxy_set_header        X-Real-IP $remote_addr;
+               proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+               proxy_connect_timeout   150;
+               proxy_send_timeout      100;
+               proxy_read_timeout      100;
+           }
+       }
+
+   The virtual host setting files for the other applications are similar. Just modify the server name and port number accordingly. The above server name is recommended for local development setup.
+
+#. Enable the virtual host.
+
+   .. sourcecode:: bash
+
+       cd /etc/nginx/sites-enabled
+       sudo ln -s ../sites-available/jophiel .
+
+#. Reload Nginx.
+#. Make the server name point to the server IP address. For local development setup, this can be done by adding this line to **/etc/hosts**: ::
+
+       127.0.0.1    jophiel.judgels.local
+
+   For production setup, add the subdomain on your domain management web interface.
+
+#. That's it. The Judgels application can be opened on your browser using the new server name (in this case, http://jophiel.judgels.local).

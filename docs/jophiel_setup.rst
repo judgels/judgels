@@ -50,13 +50,7 @@ recaptcha.registration.key.{site, secret}
 Running Jophiel
 ---------------
 
-Jophiel can be run by running
-
-.. sourcecode:: bash
-
-    judgels run jophiel
-
-You can open Jophiel by opening **http://localhost:9001** on your web browser.
+See :ref:`Running Judgels Play applications <play_run>`.
 
 Adding initial admin
 --------------------
