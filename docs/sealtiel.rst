@@ -6,7 +6,6 @@ Sealtiel is the bridge that handles asynchronous messages between Judgels applic
 Internally, Sealtiel uses `RabbitMQ <http://rabbitmq.com>`_.
 
 .. toctree::
-   :maxdepth: 2
 
    sealtiel_setup
    sealtiel_manual
