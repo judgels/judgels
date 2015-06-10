@@ -8,7 +8,7 @@ Welcome to Judgels' documentation!
    setup
    terminal
    jophiel
-   Sandalphon
+   sandalphon
    ProblemTypes
    sealtiel
    gabriel
