@@ -19,22 +19,22 @@ To add a Sealtiel client, perform these steps.
 
 A Sealtiel client has been successfully created with the corresponding client JID and client secret. The client can then connect to Sealtiel using the JID and secret.
 
-Adding channels
----------------
+Adding acquaintances
+--------------------
 
-For client A to be able to send message to client B, client B must registered as client A's "**channel**". Think of channel as a directed edge between clients.
+For client A to be able to send message to client B, client B must registered as client A's "**acquaintance**". Think of acquaintance as a directed edge between clients.
 
-To add channels to a Sealtiel client, perform these steps.
+To add acquaintances to a Sealtiel client, perform these steps.
 
 #. Open Sealtiel and click **Clients** menu on the left.
 #. Click the Enter icon on the rightmost column of the corresponding client row.
-#. Add the client name(s) as new channels.
+#. Add the client name(s) as a new acquaintance.
 
 For example, when setting up Sandalphon and Gabriel to work together, you must:
 
 - Add Sandalphon and Gabriel as Sealtiel clients.
-- Add Gabriel as Sandalphon's channel.
-- Add Sandalphon as Gabriel's channel.
+- Add Gabriel as Sandalphon's acquaintance.
+- Add Sandalphon as Gabriel's acquaintance.
 
 Watching messages
 -----------------

@@ -25,7 +25,7 @@ First, let's configure the dependencies so that they can work with Sandalphon. D
 #. Add Sandalphon as a client in Jophiel. Then, assign the client JID and secret values to Sandalphon's **jophiel.clientJid** and **jophiel.clientSecret**. Assign **jophiel.baseUrl** to Jophiel's base URL.
 #. Add Sandalphon as a client in Sealtiel. Then, assign the client JID and secret values to Sandalphon's **sealtiel.clientJid** and **sealtiel.clientSecret**. Assign **sealtiel.baseUrl** to Sealtiel's base URL.
 #. Add Gabriel as a client in Sealtiel. Then, assign the client JID and secret values to **Gabriel**'s **sealtiel.clientJid** and **sealtiel.clientSecret**. Assign **Gabriel**'s **sealtiel.baseUrl** to Sealtiel's base URL. Finally, assign the client JID to **Sandalphon**'s **sealtiel.gabrielClientJid**.
-#. Add channels between Sandalphon and Gabriel, vice-versa, in Sealtiel.
+#. Add acquaintances between Sandalphon and Gabriel, vice-versa, in Sealtiel.
 
 Running Sandalphon
 ------------------
