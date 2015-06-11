@@ -9,9 +9,8 @@ Welcome to Judgels' documentation!
    jophiel
    sandalphon
    sealtiel
+   uriel
    gabriel
-   Uriel
-   ContestTypes
    Troubleshooting
    developers-guide
    FutureTargets
