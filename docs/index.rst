@@ -8,7 +8,6 @@ Welcome to Judgels' documentation!
    terminal
    jophiel
    sandalphon
-   ProblemTypes
    sealtiel
    gabriel
    Uriel
