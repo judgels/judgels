@@ -10,6 +10,8 @@ Welcome to Judgels' documentation!
    sandalphon
    sealtiel
    uriel
+   michael
+   jerahmeel
    gabriel
    developers-guide
    FutureTargets
