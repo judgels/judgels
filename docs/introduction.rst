@@ -45,19 +45,24 @@ Developers
 
 This project is currently being developed by the following people, each in alphabetical order.
 
-Maintainers:
-************
+Maintainers
+***********
 
 - Ashar Fuadi (`@fushar <https://github.com/fushar/>`_)
 - Jordan Fernando (`@dragoon20 <https://github.com/dragoon20/>`_)
 - Petra Novandi Barus (project manager) (`@petrabarus <https://github.com/petrabarus/>`_)
 
-Contributors:
-*************
+Contributors
+************
 
 - Bagus Seto Wiguno (`@bswig <https://github.com/bswig/>`_)
 - Deny Prasetyo (`@jasoet <https://github.com/jasoet/>`_)
 - Ivan Hendrajaya (`@ivanhendrajaya <https://github.com/ivanhendrajaya/>`_)
-- Karol Danutama (`@oldark <https://github.com/oldark/>`_)
+- Inggriani Liem
+- Adi Mulyanto
+- Arief Widhiyasa
+- Derianto Kusuma
+- Brian Marshal
+- William Gozali
 
 Public contributions are welcome. Please consult the Developer's Guide on how Judgels works in detail.
