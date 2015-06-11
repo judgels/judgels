@@ -1,7 +1,7 @@
 Introduction
 ============
 
-**Judgels** (**Judgment Angels**) is a set modular applications for educational programming purposes. It was initiated by `Ikatan Alumni Tim Olimpiade Komputer Indonesia <http://blog.ia-toki.org/>`_ (English: Indonesia Computing Olympiad Alumni Association). It is designed to support:
+**Judgels** (**Judgment Angels**) is a set of modular applications for educational programming purposes. It was initiated by `Ikatan Alumni Tim Olimpiade Komputer Indonesia <http://blog.ia-toki.org/>`_ (English: Indonesia Computing Olympiad Alumni Association). It is designed to support:
 
 - competitive programming contests,
 - competitive programming problem archive,
@@ -30,12 +30,10 @@ The applications are designed to be modular. For example, multiple instances of 
 
 Judgels applications are still being heavily developed and do not have any stable releases yet. Anyone can try at their own risks.
 
-
 Framework
 ---------
 
 All Judgels applications, except Gabriel, are developed using `Play Framework 2.3.7 (Java) <https://www.playframework.com>`_. For convenience, we will call them **Judgels Play applications**. The Java version used is Java 8. Gabriel is written in Java 8, and uses `Moe Contest Environment <http://www.ucw.cz/moe/>`_ for the sandbox.
-
 
 License
 -------

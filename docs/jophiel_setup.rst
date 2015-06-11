@@ -57,8 +57,8 @@ Adding initial admin
 
 Jophiel has been successfully installed and configuring. Now, we need to have a user with admin role.
 
-- Open Jophiel. You will be presented with a login screen. Choose Register.
-- Register a user to be assigned as admin.
-- Validate the user by following the validation email. If you don't have a valid SMTP server setup, you can do the validation manually by setting the **emailVerified** column to **1** in the corresponding row in the **jophiel_user_email** table.
-- Manually assign this user as admin, by setting the **roles** column to **user,admin** in the corresponding row in the **jophiel_user** table.
-- Log in to Jophiel. Verify that you can view the **Users** menu on the left.
+#. Open Jophiel. You will be presented with a login screen. Choose Register.
+#. Register a user to be assigned as admin.
+#. Validate the user by following the validation email. If you don't have a valid SMTP server setup, you can do the validation manually by setting the **emailVerified** column to **1** in the corresponding row in the **jophiel_user_email** table.
+#. Manually assign this user as admin, by setting the **roles** column to **user,admin** in the corresponding row in the **jophiel_user** table.
+#. Log in to Jophiel. Verify that you can view the **Users** menu on the left.

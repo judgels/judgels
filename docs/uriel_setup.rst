@@ -60,4 +60,4 @@ Uriel has been successfully installed and configured. Now, we need to have a use
 
 #. Find your user JID in Jophiel.
 #. Set the **roles** column to **user,admin** in the corresponding row (that contains your user JID) in the **uriel_user** table.
-#. Log in to Uriel. Verify that you can view the **Users** menu on the left.
+#. Re-log in to Uriel. Verify that you can view the **Users** menu on the left.

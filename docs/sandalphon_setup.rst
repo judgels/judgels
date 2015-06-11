@@ -9,7 +9,7 @@ As described in the previous section, Sandalphon depends on Jophiel, Sealtiel, a
 Installing Sandalphon
 ---------------------
 
-First, follow the :ref:`main Judgels setup <setup>` instructions if you haven't. This means that you should have installed Jophiel by running
+First, follow the :ref:`main Judgels setup <setup>` instructions if you haven't. This means that you should have installed Sandalphon by running
 
 .. sourcecode:: bash
 
@@ -55,4 +55,4 @@ Sandalphon has been successfully installed and configured. Now, we need to have 
 
 #. Find your user JID in Jophiel.
 #. Set the **roles** column to **user,admin** in the corresponding row (that contains your user JID) in the **sandalphon_user** table.
-#. Log in to Sandalphon. Verify that you can view the **Clients** menu on the left.
+#. Re-log in to Sandalphon. Verify that you can view the **Clients** menu on the left.
