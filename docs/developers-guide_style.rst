@@ -6,6 +6,7 @@ Here are some best practices that are recommended by Judgels maintainers.
 Java
 ----
 
+#. Use 4 spaces for indentation (not tabs).
 #. Use curly braces in a block even it contains only one statement.
 #. Put the opening curly brace on the right of the statement:
 
