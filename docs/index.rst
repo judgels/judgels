@@ -11,6 +11,5 @@ Welcome to Judgels' documentation!
    sealtiel
    uriel
    gabriel
-   Troubleshooting
    developers-guide
    FutureTargets
