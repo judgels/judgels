@@ -1,5 +1,7 @@
 # Judgment Angels
 
+[![Documentation Status](https://readthedocs.org/projects/judgels/badge/?version=latest)](https://readthedocs.org/projects/judgels)
+
 ## Introduction
 
 **Judgels** (**Judgment Angels**) is a set of modular applications for educational programming purposes. It was initiated by [Ikatan Alumni Tim Olimpiade Komputer Indonesia](http://blog.ia-toki.org/) (English: Indonesia Computing Olympiad Alumni Association). It is designed to support:
