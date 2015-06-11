@@ -3,8 +3,10 @@ Programming problems
 
 Currently, only **blackbox**-type programming problems are supported. Blackbox means that contestant submissions are graded based on the outputs on the provided **test cases**. The submission source code is not checked.
 
-Concepts
---------
+The specific configuration for programming problems can be found in **Grading** tab.
+
+Test data concepts
+------------------
 
 Test cases
 **********
@@ -253,3 +255,8 @@ Here is an example communicator program in a typical binary search problem. In t
             }
         }
     }
+
+Language restriction
+--------------------
+
+You can limit which programming languages are allowed for a submission to a problem, in the **Language Restriction** subtab.
