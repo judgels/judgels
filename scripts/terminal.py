@@ -24,6 +24,7 @@ JUDGELS_REPOS = OrderedDict(sorted({
     'jophiel'            : {'jophiel-commons'},
     'jophiel-commons'    : {'play-commons'},
     'judgels'            : set(),
+    'judgels-commons'    : set(),
     'michael'            : {'play-commons'},
     'moe'                : set(),
     'play-commons'       : {'judgels-commons'},
