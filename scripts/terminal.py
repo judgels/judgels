@@ -32,8 +32,8 @@ JUDGELS_REPOS = OrderedDict(sorted({
     'sandalphon-commons' : {'play-commons', 'gabriel-commons', 'sealtiel-commons'},
     'sealtiel'           : {'play-commons', 'sealtiel-commons'},
     'sealtiel-commons'   : {'commons'},
-    'uriel'              : {'uriel-commons', 'sandalphon-commons', 'jophiel-commons'},
-    'uriel-commons'      : {'play-commons'}
+    'uriel'              : {'uriel-commons', 'jophiel-commons'},
+    'uriel-commons'      : {'play-commons', 'sandalphon-commons'}
 }.items(), key=lambda e: e[0]))
 
 JUDGELS_REPOS['--all'] = set(JUDGELS_REPOS.keys())
