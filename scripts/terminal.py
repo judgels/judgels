@@ -18,19 +18,19 @@ JUDGELS_APPS = OrderedDict(sorted({
 }.items(), key=lambda e: e[1]))
 
 JUDGELS_REPOS = OrderedDict(sorted({
-    'gabriel'            : {'gabriel-commons', 'moe'},
-    'gabriel-commons'    : {'sealtiel-commons'},
+    'gabriel'            : {'gabriel-commons', 'moe', 'sealtiel-commons'},
+    'gabriel-commons'    : {'judgels-commons'},
     'jerahmeel'          : {'sandalphon-commons', 'jophiel-commons'},
     'jophiel'            : {'jophiel-commons'},
     'jophiel-commons'    : {'play-commons'},
     'judgels'            : set(),
     'michael'            : {'play-commons'},
     'moe'                : set(),
-    'play-commons'       : set(),
+    'play-commons'       : {'judgels-commons'},
     'sandalphon'         : {'sandalphon-commons', 'jophiel-commons'},
-    'sandalphon-commons' : {'play-commons', 'gabriel-commons'},
+    'sandalphon-commons' : {'play-commons', 'gabriel-commons', 'sealtiel-commons'},
     'sealtiel'           : {'play-commons', 'sealtiel-commons'},
-    'sealtiel-commons'   : set(),
+    'sealtiel-commons'   : {'judgels-commons'},
     'uriel'              : {'uriel-commons', 'sandalphon-commons', 'jophiel-commons'},
     'uriel-commons'      : {'play-commons'}
 }.items(), key=lambda e: e[0]))
