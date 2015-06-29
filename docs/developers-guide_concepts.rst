@@ -41,7 +41,10 @@ The main repository is the **judgels** repository. The responisibilites of this 
 
 The other Judgels repositories are prefixed with **judgels-**. For each Judgels application <app>, there will be a repository named **judgels-<app>**, which hosts the application code.
 
-For some Judgels applications, there are **judgels-<app>-commons**, which contains parts of the application that can be used by other applications that depend on it.
+In addition, for each Judgels applications, there will be **judgels-<app>-commons** repository, which contains parts of the application that can be used by other applications that depend on it.
+
+judgels-commons
+    Consists of basic dependencies used by all applications.
 
 judgels-play-commons
     Mainly consists of:
@@ -61,6 +64,12 @@ judgels-uriel-commons
 
 judgels-sealtiel-commons
     Consists of components used by other Judgels applications for fetching and sending messages from Sealtiel.
+
+judgels-jerahmeel-commons
+    Consists of components used by other Judgels applications that depend on Jerahmeel (currently none).
+
+judgels-michael-commons
+    Consists of components used by other Judgels applications that depend on Michael (currently none).
 
 judgels-gabriel-commons
     Consists of interfaces and implementations of grading engines.
