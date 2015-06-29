@@ -7,6 +7,7 @@
 #### Added
 - Add Google analytics.
 - Add show full screen and hide sidebar button.
+- Can add user to applications even when they have not entered the applications.
 
 #### Fixed
 - Prevent JVM from exiting if Akka fails.
@@ -22,6 +23,11 @@
 #### Fixed
 - Fix discard user clone bug in Windows.
 
+### Sealtiel
+
+#### Fixed
+- Fix JSON parse exception in clients when Sealtiel is shut down.
+
 ### Uriel
 
 #### Added
@@ -34,8 +40,12 @@
 
 ### Gabriel
 
+#### Added
+- Show internal error grading messages in submission view.
+
 #### Fixed
 - Add timeout to all connections to Sandalphon.
+
 
 ## [0.4.0] - 2015-05-08
 
