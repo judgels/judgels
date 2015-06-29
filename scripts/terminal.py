@@ -206,9 +206,11 @@ def release(version):
     for repo in repos:
         print('Bumping {}...'.format(get_repo_name(repo)))
 
-        write_string_to_file(version, '{}/version.properties'.format(get_repo_dir(repo)))
-        execute('git add version.properties', get_repo_dir(repo))
-        execute('git commit -m "Bump version {}"'.format(version), get_repo_dir(repo))
+        if repo != 'moe':
+            write_string_to_file(version, '{}/version.properties'.format(get_repo_dir(repo)))
+            execute('git add version.properties', get_repo_dir(repo))
+            execute('git commit -m "Bump version {}"'.format(version), get_repo_dir(repo))
+
         execute('git tag -a v{} -m "Version {}"'.format(version, version), get_repo_dir(repo))
         execute('git push --tags origin master'.format(version, version), get_repo_dir(repo))
         print()
