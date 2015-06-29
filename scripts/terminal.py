@@ -75,7 +75,7 @@ def repo_exists(repo):
 
 def assert_repo_known(repo):
     if repo not in JUDGELS_REPOS:
-        die('Judgels repository judgels-{} unknown'.format(repo))
+        die('Judgels repository {} unknown'.format(get_repo_name(repo)))
 
 
 def assert_repo_clean(repo):
@@ -135,7 +135,7 @@ def clean(repo):
 
     for rep in get_repo_and_all_deps(repo):
         if repo_exists(rep):
-            print('Cleaning judgels-{}...'.format(rep))
+            print('Cleaning {}...'.format(get_repo_name(rep)))
             execute('./activator clean', get_repo_dir(rep))
             print()
 
@@ -177,7 +177,7 @@ def pull(repo):
 
     for rep in get_repo_and_all_deps(repo):
         if repo_exists(rep):
-            print('Pulling judgels-{}...'.format(rep))
+            print('Pulling {}...'.format(get_repo_name(rep)))
             execute('git pull --rebase origin master', get_repo_dir(rep))
             print()
         else:
@@ -190,7 +190,7 @@ def push(repo):
 
     for rep in get_repo_and_all_deps(repo):
         if repo_exists(rep):
-            print('Pushing judgels-{}...'.format(rep))
+            print('Pushing {}...'.format(get_repo_name(rep)))
             execute('git push origin master', get_repo_dir(rep))
             print()
 
