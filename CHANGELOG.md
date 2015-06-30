@@ -1,5 +1,68 @@
 # Change Logs
 
+## [0.6.0] - 2015-06-30
+
+### Overall
+
+#### Added
+- Introduce judgels-commons repository, that hosts basic dependencies for all applications.
+- For each Judgels Play application X, introduce judgels-X-commons, that hosts business models.
+- Integrate to Travis CI.
+- Add Javadocs builder that collect from all repositories.
+- Show times in relative.
+
+#### Changed
+- Rewrite Judgels terminal script in Python. Have better repo dependency management.
+- Restructure package organization, by introducing and renaming packages.
+- Standardize HTTP request calls, using Apache HTTP libraries.
+- Use Typesafe Activator for all repositories.
+- Use @Transactional correctly; should be in each method.
+
+#### Fixed
+- Make breadcrumbs responsive if there are too many items.
+- Fix unresolved joda-time dependecy that sometimes happen when no internet connection present
+
+#### Removed
+- Don't use git submodules anymore.
+- Don't use judgels-frontend-commons anymore; it is split into respective app's commons.
+
+### Jophiel
+
+#### Added
+- Add simple unit tests.
+- Add simple integration tests.
+- Add recaptcha for registration.
+- Add password strength meter for registration.
+- Add salts for passwords.
+
+#### Fixed
+- Add missing www-authenticate header to http basic authentication response.
+- Fix strange guest users created in tables.
+
+### Sandalphon
+
+#### Added
+- Add bundle problem type.
+
+### Sealtiel
+
+#### Changed
+- Upgrade RabbitMQ to version 3.5.x.
+
+### Uriel
+
+#### Added
+- Unregister from public contests.
+
+#### Fixed
+- Contest scoreboard is now responsive; looks good for contests with many problems.
+- Fix cannot show image from Sandalphon if the filename contains spaces.
+
+### Jerahmeel
+
+#### Added
+- Introduce first working version of Jerahmeel.
+
 ## [0.5.0] - 2015-05-15
 
 ### Overall
