@@ -244,7 +244,6 @@ def start(app, version, port):
 
 def start_https(app, version, port):
     assert_app_known(app)
-    assert_repo_exists(app)
 
     if port == -1:
         port = JUDGELS_APPS[app]
