@@ -14,7 +14,7 @@ First, make sure that you:
 - Have cloned **judgels** repository to the base directory.
 - Have Python 3 installed.
 
-Open your **~/.bash_profile** (or create one), and add the following lines.
+Open your **~/.bashrc** (or create one), and add the following lines.
 
 .. sourcecode:: bash
 
