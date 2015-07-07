@@ -10,7 +10,7 @@ After you installed RabbitMQ, enable the management plugin:
 
 .. sourcecode:: bash
 
-    rabbitmq-plugins enable rabbitmq_management
+    sudo rabbitmq-plugins enable rabbitmq_management
 
 If everything goes well, you should be able to open the management web interface on http://localhost:15672. You can login with the default user (username: **guest**, password: **guest**).
 
@@ -54,7 +54,7 @@ Run
 
 .. sourcecode:: bash
 
-    rabbitmq-server
+    sudo rabbitmqctl start_app
 
 If RabbitMQ was installed correctly, this will be output: ::
 
