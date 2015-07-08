@@ -127,16 +127,24 @@ Akka is used for concurrency management. It is safe to use the default configura
 Running Judgels Play applications
 ---------------------------------
 
-Modes
-*****
-
-After the installation and configuration, we can run Judgels play applications in two modes:
+After the installation and configuration, we can run Judgels play applications in two modes.
 
 Development mode
-    Run the :code:`judgels run <app>` command. This mode is intended for development environment. Classes will be automatically recompiled if there are changes in the corresponding source files, without having to restart the application.
+****************
+
+Run the :code:`judgels run <app>` command. This mode is intended for development environment. Classes will be automatically recompiled if there are changes in the corresponding source files, without having to restart the application.
 
 Production mode
-    Run the :code:`judgels dist <app>` and then :code:`judgels start <app> <version>` commands. Intended for production environment.
+***************
+
+In production mode, we will deploy standalone executable files without the source code.
+
+#. Run the :code:`judgels dist <app>` command. It will create a zip file JUDGELS_BASE_DIR/dist/**<app>-<version>.zip**.
+#. Copy the zip file to the target machine, in its own JUDGELS_BASE_DIR/dist directory.
+#. Unzip the file. There should be a directory JUDGELS_BASE_DIR/dist/<app>-<version>.
+#. If you run in HTTPS, you have to create a directory **conf** inside the above directory. This is probably a Play framework bug, and has been reported in this `GitHub issue <https://github.com/playframework/playframework/issues/4820>`_.
+#. Run the :code:`judgels start <app> <version>` or :code:`judgels start-https <app> <version>` command.
+
 
 Setting Nginx reverse proxy
 ***************************
