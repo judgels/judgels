@@ -23,6 +23,9 @@ play.mailer.{host, port, ssl, user, password}
 jophiel.idToken.key.private
     An RSA private key for generating ID token required for OpenID Connect protocol. You can generate one using :code:`ssh-keygen` command. Make sure to select RSA as the algorithm.
 
+jophiel.client.{labels, targets}
+    The list of public Judgels Play applications you want to inform to the users on the welcome page. This is useful in order to users that have just logged in not to get lost in SSO. Put the list of URLs in **targets**, and the corresponding link labels in **labels**.
+
 noreply.{name, email}
     The name and email of "noreply" user for sending user account related emails.
 
