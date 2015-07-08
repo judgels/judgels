@@ -87,10 +87,10 @@ application.title
 application.copyright
     The displayed copyright/institution name that hosts the application. For example: "XXX University".
 
-application.secret
+play.crypto.secret
     Play framework's secret key for cryptographics functions. The default value must be changed for security. See https://www.playframework.com/documentation/2.4.x/ApplicationSecret for more details.
 
-session.secure
+play.http.session.secure
     Set to true if you use HTTPS.
 
 <app>.baseUrl
@@ -110,7 +110,7 @@ The configuration file to modify is **conf/db.conf**.
 url
     Fill it with database URL. If you install MySQL in localhost, the value should be "jdbc:mysql://localhost/judgels_<app>".
 
-user
+username
     Database's username.
 
 password
