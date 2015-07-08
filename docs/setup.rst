@@ -73,6 +73,7 @@ First, copy the default configuration files. Run these commands in the applicati
 
     cp conf/application_default.conf conf/application.conf
     cp conf/db_default.conf conf/db.conf
+    cp conf/akka_default.conf conf/akka.conf
 
 Here are the configuration keys you need to modify. Note that if a key is not listed here or on the specific application page, then you don't need to modify its value.
 
@@ -87,10 +88,10 @@ application.title
 application.copyright
     The displayed copyright/institution name that hosts the application. For example: "XXX University".
 
-application.secret
-    Play framework's secret key for cryptographics functions. The default value must be changed for security. See https://www.playframework.com/documentation/2.3.x/ApplicationSecret for more details.
+play.crypto.secret
+    Play framework's secret key for cryptographics functions. The default value must be changed for security. See https://www.playframework.com/documentation/2.4.x/ApplicationSecret for more details.
 
-session.secure
+play.http.session.secure
     Set to true if you use HTTPS.
 
 <app>.baseUrl
@@ -110,27 +111,40 @@ The configuration file to modify is **conf/db.conf**.
 url
     Fill it with database URL. If you install MySQL in localhost, the value should be "jdbc:mysql://localhost/judgels_<app>".
 
-user
+username
     Database's username.
 
 password
     Database's password.
+
+Akka configuration
+******************
+
+Akka is used for concurrency management. It is safe to use the default configuration without modification.
 
 .. _play_run:
 
 Running Judgels Play applications
 ---------------------------------
 
-Modes
-*****
-
-After the installation and configuration, we can run Judgels play applications in two modes:
+After the installation and configuration, we can run Judgels play applications in two modes.
 
 Development mode
-    Run the :code:`judgels run <app>` command. This mode is intended for development environment. Classes will be automatically recompiled if there are changes in the corresponding source files, without having to restart the application.
+****************
+
+Run the :code:`judgels run <app>` command. This mode is intended for development environment. Classes will be automatically recompiled if there are changes in the corresponding source files, without having to restart the application.
 
 Production mode
-    Run the :code:`judgels dist <app>` and then :code:`judgels start <app> <version>` commands. Intended for production environment.
+***************
+
+In production mode, we will deploy standalone executable files without the source code.
+
+#. Run the :code:`judgels dist <app>` command. It will create a zip file JUDGELS_BASE_DIR/dist/**<app>-<version>.zip**.
+#. Copy the zip file to the target machine, in its own JUDGELS_BASE_DIR/dist directory.
+#. Unzip the file. There should be a directory JUDGELS_BASE_DIR/dist/<app>-<version>.
+#. If you run in HTTPS, you have to create a directory **conf** inside the above directory. This is probably a Play framework bug, and has been reported in this `GitHub issue <https://github.com/playframework/playframework/issues/4820>`_.
+#. Run the :code:`judgels start <app> <version>` or :code:`judgels start-https <app> <version>` command.
+
 
 Setting Nginx reverse proxy
 ***************************

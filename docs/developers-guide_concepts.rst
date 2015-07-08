@@ -11,10 +11,10 @@ Language
     - Scala for Play's views.
 
 Framework
-    `Play Framework 2.3.7 (Java) <https://www.playframework.com>`_ for Judgels Play applications.
+    `Play Framework 2.4.2 (Java) <https://www.playframework.com>`_ for Judgels Play applications.
 
 Template engine
-    `Twirl <https://www.playframework.com/documentation/2.3.x/ScalaTemplates>`_ for Judgels Play applications.
+    `Twirl <https://www.playframework.com/documentation/2.4.x/ScalaTemplates>`_ for Judgels Play applications.
 
 Database
     `MySQL <https://www.mysql.com>`_ for Judgels Play applications.
@@ -86,11 +86,11 @@ It will be easier to explain with a diagram. Suppose that a user wants to change
 
 #. Admin starts Jophiel, using :code:`judgels start jophiel` or :code:`judgels run jophiel` command.
 
-#. The Play's `Global <https://www.playframework.com/documentation/2.3.x/JavaGlobal>`_ object is loaded and run. It will construct all controller classes and their dependencies (services), using dependency injection with Spring Framework.
+#. The Play's `Global <https://www.playframework.com/documentation/2.4.x/JavaGlobal>`_ object is loaded and run. It will construct all controller classes and their dependencies (services), using dependency injection with Spring Framework.
 
 #. User makes HTTP request to change his profile, by opening the URL http://localhost:9001/profile on his browser.
 
-#. The request is passed to the Play's `Routes <https://www.playframework.com/documentation/2.3.x/JavaRouting>`_ object. Based on the request string (**/profile**), the correct controller class and the action method is called. In this case, **UserProfileController**'s **profile()** method is called.
+#. The request is passed to the Play's `Routes <https://www.playframework.com/documentation/2.4.x/JavaRouting>`_ object. Based on the request string (**/profile**), the correct controller class and the action method is called. In this case, **UserProfileController**'s **profile()** method is called.
 
 #. The controller checks whether the user has the right permission to perform the action. Then, controller calls the correct method in the service object responsible for user management. Services are objects that do business processes of the system. In this case, **UserProfileService**'s **updateProfile()** is called.
 
@@ -102,7 +102,7 @@ It will be easier to explain with a diagram. Suppose that a user wants to change
 
 #. The controller retrieves the returned user business model. Then the controller uses the user's properties to construct the form object. In this case, the form class is **UserProfileForm**.
 
-#. The controller passes the form to the view object to render. We use `Twirl <https://www.playframework.com/documentation/2.3.x/ScalaTemplates>`_, the default Play's templating engine. The whole view and form are rendered as HTML page.
+#. The controller passes the form to the view object to render. We use `Twirl <https://www.playframework.com/documentation/2.4.x/ScalaTemplates>`_, the default Play's templating engine. The whole view and form are rendered as HTML page.
 
 #. The controller returns an HTTP response to the user. The user is then able to fill the form for changing his profile. The flow finishes.
 

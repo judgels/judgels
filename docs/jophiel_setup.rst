@@ -17,14 +17,14 @@ Configuring Jophiel
 
 This section will cover the specific configuration keys for Jophiel.
 
+play.mailer.{host, port, ssl, user, password}
+    SMTP credentials configuration for sending user account related emails.
+
 jophiel.idToken.key.private
     An RSA private key for generating ID token required for OpenID Connect protocol. You can generate one using :code:`ssh-keygen` command. Make sure to select RSA as the algorithm.
 
 noreply.{name, email}
     The name and email of "noreply" user for sending user account related emails.
-
-smtp.{host, port, ssl, user, password}
-    SMTP credentials configuration for sending user account related emails.
 
 aws.avatar.s3.use
     Whether to use AWS as the storage for user avatars. If set to true, then the rest of the **aws.avatar.\*** keys below should be modified accordingly.

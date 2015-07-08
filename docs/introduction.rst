@@ -33,7 +33,7 @@ Judgels applications are still being heavily developed and do not have any stabl
 Framework
 ---------
 
-All Judgels applications, except Gabriel, are developed using `Play Framework 2.3.7 (Java) <https://www.playframework.com>`_. For convenience, we will call them **Judgels Play applications**. The Java version used is Java 8. Gabriel is written in Java 8, and uses `Moe Contest Environment <http://www.ucw.cz/moe/>`_ for the sandbox.
+All Judgels applications, except Gabriel, are developed using `Play Framework 2.4.2 (Java) <https://www.playframework.com>`_. For convenience, we will call them **Judgels Play applications**. The Java version used is Java 8. Gabriel is written in Java 8, and uses `Moe Contest Environment <http://www.ucw.cz/moe/>`_ for the sandbox.
 
 License
 -------
