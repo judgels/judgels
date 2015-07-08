@@ -73,6 +73,7 @@ First, copy the default configuration files. Run these commands in the applicati
 
     cp conf/application_default.conf conf/application.conf
     cp conf/db_default.conf conf/db.conf
+    cp conf/akka_default.conf conf/akka.conf
 
 Here are the configuration keys you need to modify. Note that if a key is not listed here or on the specific application page, then you don't need to modify its value.
 
@@ -115,6 +116,11 @@ username
 
 password
     Database's password.
+
+Akka configuration
+******************
+
+Akka is used for concurrency management. It is safe to use the default configuration without modification.
 
 .. _play_run:
 
