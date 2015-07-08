@@ -88,7 +88,7 @@ application.copyright
     The displayed copyright/institution name that hosts the application. For example: "XXX University".
 
 application.secret
-    Play framework's secret key for cryptographics functions. The default value must be changed for security. See https://www.playframework.com/documentation/2.3.x/ApplicationSecret for more details.
+    Play framework's secret key for cryptographics functions. The default value must be changed for security. See https://www.playframework.com/documentation/2.4.x/ApplicationSecret for more details.
 
 session.secure
     Set to true if you use HTTPS.
