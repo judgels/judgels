@@ -19,23 +19,20 @@ JUDGELS_APPS = OrderedDict(sorted({
 
 JUDGELS_REPOS = OrderedDict(sorted({
     'commons'            : set(),
-    'gabriel'            : {'gabriel-commons', 'moe', 'sealtiel-commons'},
-    'gabriel-commons'    : {'commons'},
-    'jerahmeel'          : {'jerahmeel-commons', 'jophiel-commons'},
-    'jerahmeel-commons'  : {'play-commons', 'sandalphon-commons'},
-    'jophiel'            : {'jophiel-commons'},
-    'jophiel-commons'    : {'play-commons'},
+    'gabriel'            : {'gabrielcommons', 'moe', 'sealtielcommons'},
+    'gabrielcommons'    : {'commons'},
+    'jerahmeel'          : {'playcommons', 'sandalphoncommons', 'jophielcommons'},
+    'jophiel'            : {'jophielcommons'},
+    'jophielcommons'    : {'playcommons'},
     'judgels'            : set(),
-    'michael'            : {'michael-commons'},
-    'michael-commons'    : {'play-commons'},
+    'michael'            : {'playcommons'},
     'moe'                : set(),
-    'play-commons'       : {'commons'},
-    'sandalphon'         : {'sandalphon-commons', 'jophiel-commons'},
-    'sandalphon-commons' : {'play-commons', 'gabriel-commons', 'sealtiel-commons'},
-    'sealtiel'           : {'play-commons', 'sealtiel-commons'},
-    'sealtiel-commons'   : {'commons'},
-    'uriel'              : {'uriel-commons', 'jophiel-commons'},
-    'uriel-commons'      : {'play-commons', 'sandalphon-commons'}
+    'playcommons'       : {'commons'},
+    'sandalphon'         : {'sandalphoncommons', 'jophielcommons'},
+    'sandalphoncommons' : {'playcommons', 'gabrielcommons', 'sealtielcommons'},
+    'sealtiel'           : {'playcommons', 'sealtielcommons'},
+    'sealtielcommons'   : {'commons'},
+    'uriel'              : {'playcommons', 'sandalphoncommons', 'jophielcommons'},
 }.items(), key=lambda e: e[0]))
 
 JUDGELS_REPOS['--all'] = set(JUDGELS_REPOS.keys())
@@ -79,12 +76,12 @@ def repo_exists(repo):
 
 def assert_repo_known(repo):
     if repo not in JUDGELS_REPOS:
-        die('Judgels repository {} unknown'.format(get_repo_name(repo)))
+        die('Judgels repository {} unknown'.format(repo))
 
 
 def assert_repo_clean(repo):
     if check_output('git status --porcelain --untracked-files=no', get_repo_dir(repo)):
-        die('Git repository {} not clean'.format(get_repo_name(repo)))
+        die('Git repository {} not clean'.format(repo))
 
 
 def assert_repo_and_all_deps_clean(repo):
@@ -100,18 +97,11 @@ def assert_app_known(app):
 
 def assert_repo_exists(repo):
     if not repo_exists(repo):
-        die('Git repository {} not exist in {}'.format(get_repo_name(repo), JUDGELS_BASE_DIR))
+        die('Git repository {} not exist in {}'.format(repo, JUDGELS_BASE_DIR))
 
 
 def get_repo_dir(repo):
-    if repo == 'judgels':
-        return '{}/judgels'.format(JUDGELS_BASE_DIR)
-    else:
-        return '{}/judgels-{}'.format(JUDGELS_BASE_DIR, repo)
-
-
-def get_repo_name(repo):
-    return 'judgels' if repo == 'judgels' else 'judgels-{}'.format(repo)
+    return '{}/{}'.format(JUDGELS_BASE_DIR, repo)
 
 
 def get_repo_and_all_deps(repo):
@@ -124,7 +114,7 @@ def get_repo_and_all_deps(repo):
 
 
 def get_app_pid_file(app):
-    return '{}/dist/judgels-{}.pid'.format(JUDGELS_BASE_DIR, app)
+    return '{}/dist/{}.pid'.format(JUDGELS_BASE_DIR, app)
 
 
 def get_app_pid(app):
@@ -139,7 +129,7 @@ def clean(repo):
 
     for rep in get_repo_and_all_deps(repo):
         if repo_exists(rep):
-            print('Cleaning {}...'.format(get_repo_name(rep)))
+            print('Cleaning {}...'.format(rep))
             execute('./activator clean', get_repo_dir(rep))
             print()
 
@@ -181,11 +171,11 @@ def pull(repo):
 
     for rep in get_repo_and_all_deps(repo):
         if repo_exists(rep):
-            print('Pulling {}...'.format(get_repo_name(rep)))
+            print('Pulling {}...'.format(rep))
             execute('git pull --rebase origin master', get_repo_dir(rep))
             print()
         else:
-            execute('git clone https://github.com/ia-toki/judgels-{}.git'.format(rep), JUDGELS_BASE_DIR)
+            execute('git clone https://github.com/judgels/{}.git'.format(rep), JUDGELS_BASE_DIR)
 
 
 def push(repo):
@@ -194,7 +184,7 @@ def push(repo):
 
     for rep in get_repo_and_all_deps(repo):
         if repo_exists(rep):
-            print('Pushing {}...'.format(get_repo_name(rep)))
+            print('Pushing {}...'.format(rep))
             execute('git push origin master', get_repo_dir(rep))
             print()
 
@@ -208,7 +198,7 @@ def release(version):
         assert_repo_clean(repo)
 
     for repo in repos:
-        print('Bumping {}...'.format(get_repo_name(repo)))
+        print('Bumping {}...'.format(repo))
 
         if repo != 'moe':
             write_string_to_file(version, '{}/version.properties'.format(get_repo_dir(repo)))
@@ -237,7 +227,7 @@ def start(app, version, port):
         port = JUDGELS_APPS[app]
 
     command = 'bin/{}'.format(app) + \
-              ' -Dpidfile.path=../judgels-{}.pid'.format(app) + \
+              ' -Dpidfile.path=../{}.pid'.format(app) + \
               ' -Dhttp.port={}'.format(port)
     execute(command, '{}/dist/{}-{}'.format(JUDGELS_BASE_DIR, app, version))
 
@@ -249,7 +239,7 @@ def start_https(app, version, port):
         port = JUDGELS_APPS[app]
 
     command = 'bin/{}'.format(app) + \
-              ' -Dpidfile.path=../judgels-{}.pid'.format(app) + \
+              ' -Dpidfile.path=../{}.pid'.format(app) + \
               ' -Dhttp.port=disabled -Dhttps.port={}'.format(port)
     execute(command, '{}/dist/{}-{}'.format(JUDGELS_BASE_DIR, app, version))
 
