@@ -1,5 +1,58 @@
 # Change Logs
 
+## [0.7.0] - 2015-08-06
+
+### Overall
+
+#### Added
+- Add sidebar containing links to other Judgels apps.
+
+#### Changed
+- Move GitHub organization to https://github.com/judgels.
+- Restructure packages organization (part 2).
+- Update Play Framework to 2.4.2.
+- Manage DI in Judgels apps as specified in JSR 330.
+- Support database migration.
+
+#### Fixed
+- Don't aggregate in activator dist.
+
+### Jophiel
+
+#### Added
+- Add welcome page containing links to Judgels apps.
+
+### Sandalphon
+
+#### Changed
+- Make bundle statement non-scrollable.
+
+#### Fixed
+- Fix cannot view statement on Firefox.
+- Various minor bugfixes.
+
+### Sealtiel
+
+#### Fixed
+- Fix encoding in in messages.
+
+### Uriel
+
+#### Added
+- Support ICPC-style contest.
+
+#### Changed
+- Change some configuration from table to JSON.
+
+### Jerahmeel
+
+#### Changed
+- Sort sessions/courses/problems/lessons by alias.
+- Rename session to chapter, just in messages (not in code).
+
+#### Fixed
+- Various minor bugfixes.
+
 ## [0.6.0] - 2015-06-30
 
 ### Overall
