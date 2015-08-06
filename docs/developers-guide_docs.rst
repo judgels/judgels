@@ -61,6 +61,12 @@ Setup
 
        source env/bin/activate
 
+#. Install Sphinx.
+
+   .. sourcecode:: bash
+
+       pip install sphinx
+
 Sphinx will be ready in the directory.
 
 Writing documentation
@@ -71,8 +77,6 @@ First, try to build the documentation. Run
 .. sourcecode:: bash
 
     make html
-
-Sphinx will be installed the first time you run the command.
 
 If everything goes well, a file **$JUDGELS_BASE_DIR/judgels/docs/_build/html/index.html** will be built. Open it on your browser to see the documentation.
 
