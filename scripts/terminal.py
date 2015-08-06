@@ -130,7 +130,7 @@ def clean(repo):
     for rep in get_repo_and_all_deps(repo):
         if repo_exists(rep):
             print('Cleaning {}...'.format(rep))
-            execute('./activator clean', get_repo_dir(rep))
+            execute('activator clean', get_repo_dir(rep))
             print()
 
 
@@ -142,7 +142,7 @@ def dist(repo):
 
     repo_version = read_file_to_string('{}/version.properties'.format(get_repo_dir(repo)))
 
-    execute('./activator dist', get_repo_dir(repo))
+    execute('activator dist', get_repo_dir(repo))
 
     dist_zip = '{}/target/universal/{}-{}.zip'.format(get_repo_dir(repo), repo, repo_version)
     dist_dest_dir = '{}/dist'.format(JUDGELS_BASE_DIR)
@@ -217,7 +217,7 @@ def run(app, port):
     if port == -1:
         port = JUDGELS_APPS[app]
 
-    execute('./activator run -Dhttp.port={}'.format(port), get_repo_dir(app))
+    execute('activator run -Dhttp.port={}'.format(port), get_repo_dir(app))
 
 
 def start(app, version, port):
