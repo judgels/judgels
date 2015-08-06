@@ -44,6 +44,32 @@ Restart your terminal to activate the script.
 
 More information about this command-line tool can be found here: :ref:`Command-line tool <terminal>`.
 
+Installing Activator
+--------------------
+
+All Judgels applications use Typesafe Activator as the wrapper for SBT. Activator is needed for compiling, running, starting, and distributing the applications.
+
+First, download Activator:
+
+.. sourcecode:: bash
+
+    cd $JUDGELS_BASE_DIR
+    judgels/scripts/download-activator.sh
+
+Then, add this line to your **.bashrc**:
+
+.. sourcecode:: bash
+
+    export PATH=$PATH:~/activator
+
+Try running Activator:
+
+.. sourcecode:: bash
+
+    activator
+
+If it ran, then Activator has been installed successfully.
+
 Installing database
 -------------------
 
