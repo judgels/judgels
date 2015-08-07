@@ -18,3 +18,4 @@ conf/*.conf
 !conf/*_default.conf
 application-log*
 docs/env
+checkstyle.jar
