@@ -19,20 +19,20 @@ JUDGELS_APPS = OrderedDict(sorted({
 
 JUDGELS_REPOS = OrderedDict(sorted({
     'commons'            : set(),
-    'gabriel'            : {'gabrielcommons', 'moe', 'sealtielcommons'},
-    'gabrielcommons'    : {'commons'},
-    'jerahmeel'          : {'playcommons', 'sandalphoncommons', 'jophielcommons'},
-    'jophiel'            : {'jophielcommons'},
-    'jophielcommons'    : {'playcommons'},
+    'gabriel'            : {'gabriel-commons', 'moe', 'sealtiel-commons'},
+    'gabriel-commons'    : {'commons'},
+    'jerahmeel'          : {'play-commons', 'sandalphon-commons', 'jophiel-commons'},
+    'jophiel'            : {'jophiel-commons'},
+    'jophiel-commons'    : {'play-commons'},
     'judgels'            : set(),
-    'michael'            : {'playcommons'},
+    'michael'            : {'play-commons'},
     'moe'                : set(),
-    'playcommons'       : {'commons'},
-    'sandalphon'         : {'sandalphoncommons', 'jophielcommons'},
-    'sandalphoncommons' : {'playcommons', 'gabrielcommons', 'sealtielcommons'},
-    'sealtiel'           : {'playcommons', 'sealtielcommons'},
-    'sealtielcommons'   : {'commons'},
-    'uriel'              : {'playcommons', 'sandalphoncommons', 'jophielcommons'},
+    'play-commons'       : {'commons'},
+    'sandalphon'         : {'sandalphon-commons', 'jophiel-commons'},
+    'sandalphon-commons' : {'play-commons', 'gabriel-commons', 'sealtiel-commons'},
+    'sealtiel'           : {'play-commons', 'sealtiel-commons'},
+    'sealtiel-commons'   : {'commons'},
+    'uriel'              : {'play-commons', 'sandalphon-commons', 'jophiel-commons'},
 }.items(), key=lambda e: e[0]))
 
 JUDGELS_REPOS['--all'] = set(JUDGELS_REPOS.keys())
