@@ -19,20 +19,22 @@ JUDGELS_APPS = OrderedDict(sorted({
 
 JUDGELS_REPOS = OrderedDict(sorted({
     'commons'            : set(),
-    'gabriel'            : {'gabriel-commons', 'moe', 'sealtiel-commons'},
+    'gabriel'            : {'gabriel-commons', 'moe', 'sealtiel-commons', 'gabriel-blackbox'},
+    'gabriel-blackbox'   : {'gabriel-commons'},
     'gabriel-commons'    : {'commons'},
-    'jerahmeel'          : {'play-commons', 'sandalphon-commons', 'jophiel-commons'},
+    'jerahmeel'          : {'play-commons', 'sandalphon-commons', 'jophiel-commons', 'sandalphon-blackbox-adapters'},
     'jophiel'            : {'jophiel-commons'},
     'jophiel-commons'    : {'play-commons'},
     'judgels'            : set(),
     'michael'            : {'play-commons'},
     'moe'                : set(),
     'play-commons'       : {'commons'},
-    'sandalphon'         : {'sandalphon-commons', 'jophiel-commons'},
+    'sandalphon'         : {'sandalphon-commons', 'jophiel-commons', 'sandalphon-blackbox-adapters'},
+    'sandalphon-blackbox-adapters': {'gabriel-blackbox'},
     'sandalphon-commons' : {'play-commons', 'gabriel-commons', 'sealtiel-commons'},
     'sealtiel'           : {'play-commons', 'sealtiel-commons'},
     'sealtiel-commons'   : {'commons'},
-    'uriel'              : {'play-commons', 'sandalphon-commons', 'jophiel-commons'},
+    'uriel'              : {'play-commons', 'sandalphon-commons', 'jophiel-commons', 'sandalphon-blackbox-adapters'},
 }.items(), key=lambda e: e[0]))
 
 JUDGELS_REPOS['--all'] = set(JUDGELS_REPOS.keys())
