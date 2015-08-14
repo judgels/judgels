@@ -4,7 +4,7 @@ Manual
 Running grader
 --------------
 
-After the installation and configuration are finished, Gabriel can be run using Activator. Run this command in **judgels-gabriel** directory:
+After the installation and configuration are finished, Gabriel can be run using Activator. Run this command in **gabriel** directory:
 
 .. sourcecode:: bash
 

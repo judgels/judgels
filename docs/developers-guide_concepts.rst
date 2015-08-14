@@ -39,30 +39,28 @@ The main repository is the **judgels** repository. The responisibilites of this 
 - Hosting Judgels documentation.
 - Being the central GitHub issue tracker for all Judgels applications.
 
-The other Judgels repositories are prefixed with **judgels-**. For each Judgels application <app>, there will be a repository named **judgels-<app>**, which hosts the application code.
+For each Judgels application <app>, there will be a repository named **<app>**, which hosts the application code. In addition, for some Judgels applications, there is **<app>-commons** repository, which contains parts of the application that can be used by other applications that depend on it.
 
-In addition, for some Judgels applications, there is **judgels-<app>-commons** repository, which contains parts of the application that can be used by other applications that depend on it.
-
-judgels-commons
+commons
     Consists of basic dependencies used by all applications.
 
-judgels-play-commons
+play-commons
     Mainly consists of:
 
     - Base model components and their connection management with the database.
     - Base view components that are shared across all Judgels Play applications. For example: base look-and-feel layout.
     - Base controller components.
 
-judgels-jophiel-commons
+jophiel-commons
     Consists of components used by Jophiel clients for connecting to Jophiel.
 
-judgels-sandalphon-commons
+sandalphon-commons
     Consists of components used by other Judgels applications for rendering problems and submitting solutions to Sandalphon.
 
-judgels-sealtiel-commons
+sealtiel-commons
     Consists of components used by other Judgels applications for fetching and sending messages from Sealtiel.
 
-judgels-gabriel-commons
+gabriel-commons
     Consists of interfaces and implementations of grading engines.
 
 Judgels Play application layers

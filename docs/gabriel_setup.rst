@@ -35,7 +35,7 @@ This will clone Gabriel and Moe repositories to your Judgels base directory. Nex
 Building Moe
 ------------
 
-Run these commands inside **judgels-moe** repository.
+Run these commands inside **moe** repository.
 
 .. sourcecode:: bash
 
@@ -101,7 +101,7 @@ Quota support must be enabled so that Isolate can limit the disk usage of contes
 
     sudo apt-get install quota
 
-#. Verify that quota support has been enabled. Go to **judgels-moe** directory and run: ::
+#. Verify that quota support has been enabled. Go to **moe** directory and run: ::
 
     obj/isolate/isolate -b1 -q50000,50 -vvv --init
 
@@ -112,7 +112,7 @@ Quota support must be enabled so that Isolate can limit the disk usage of contes
 Configuring Gabriel
 -------------------
 
-Copy the default conf file by running this command in **judgels-gabriel** directory:
+Copy the default conf file by running this command in **gabriel** directory:
 
 .. sourcecode:: bash
 
