@@ -31,7 +31,7 @@ Sandbox
 Project structure
 -----------------
 
-Judgels repositories are hosted on GitHub, in IA TOKI organization (https://github.com/ia-toki).
+Judgels repositories are hosted on GitHub, in Judgels organization (https://github.com/judgels).
 
 The main repository is the **judgels** repository. The responisibilites of this repository are:
 

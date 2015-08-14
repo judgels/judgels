@@ -9,7 +9,7 @@ Introduction
 - programming training courses,
 - etc.
 
-It is open source. Anyone can view and use the codebase on `GitHub <https://github.com/ia-toki/judgels>`_.
+It is open source. Anyone can view and use the codebase on `GitHub <https://github.com/judgels>`_.
 
 Applications
 ------------

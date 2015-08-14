@@ -31,7 +31,7 @@ First, clone the main Judgels repository. This repository will act as a gate to 
 .. sourcecode:: bash
 
     cd <your-Judgels-base-directory>
-    git clone https://github.com/ia-toki/judgels
+    git clone https://github.com/judgels/judgels
 
 Then, we will install Judgels terminal script that will enable many convenience commands in the terminal. Open your **~/.bash_profile** (or create one), and add the following lines.
 
