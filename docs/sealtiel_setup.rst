@@ -6,6 +6,30 @@ Installing RabbitMQ
 
 Sealtiel internally uses RabbitMQ. So, it must be installed first. Follow the installation instruction here: `Downloading and Installing RabbitMQ <https://www.rabbitmq.com/download.html>`_. Make sure you install at least version **3.5.x**.
 
+Starting RabbitMQ
+-----------------
+
+Run
+
+.. sourcecode:: bash
+
+    sudo rabbitmq-server
+
+If RabbitMQ was installed correctly, this will be output: ::
+
+
+                      RabbitMQ 3.5.X. Copyright (C) 2007-2014 GoPivotal, Inc.
+      ##  ##      Licensed under the MPL.  See http://www.rabbitmq.com/
+      ##  ##
+      ##########  Logs: /usr/local/var/log/rabbitmq/rabbit@localhost.log
+      ######  ##        /usr/local/var/log/rabbitmq/rabbit@localhost-sasl.log
+      ##########
+                  Starting broker... completed with X plugins.
+
+
+Enabling management plugin
+--------------------------
+
 After you installed RabbitMQ, enable the management plugin:
 
 .. sourcecode:: bash
@@ -46,26 +70,6 @@ sealtiel.{username, password}
 
 rabbitmq.{host, port, username, password, virtualHost}
     The credentials for connecting to RabbitMQ. In most cases, you only need to change **rabbitmq.password** to the new guest password.
-
-Running RabbitMQ
-----------------
-
-Run
-
-.. sourcecode:: bash
-
-    sudo rabbitmqctl start_app
-
-If RabbitMQ was installed correctly, this will be output: ::
-
-
-                      RabbitMQ 3.5.X. Copyright (C) 2007-2014 GoPivotal, Inc.
-      ##  ##      Licensed under the MPL.  See http://www.rabbitmq.com/
-      ##  ##
-      ##########  Logs: /usr/local/var/log/rabbitmq/rabbit@localhost.log
-      ######  ##        /usr/local/var/log/rabbitmq/rabbit@localhost-sasl.log
-      ##########
-                  Starting broker... completed with X plugins.
 
 Running Sealtiel
 ----------------
