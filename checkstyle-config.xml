@@ -171,6 +171,7 @@
         <module name="OneTopLevelClass"/>
         <module name="VisibilityModifier">
             <property name="publicMemberPattern" value=""/>
+            <property name="protectedAllowed" value="true"/>
         </module>
 
 
