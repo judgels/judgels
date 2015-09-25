@@ -1,23 +1,17 @@
-Problems
-========
+Managing problems
+=================
 
 Problem types
 -------------
 
-Currently, there are two types of problems that are supported in Sandalphon: programming problems and bundle problems.
-
-.. toctree::
-   :maxdepth: 1
-
-   sandalphon_manual_resources_problems_programming
-   sandalphon_manual_resources_problems_bundle
+Currently, there are two types of problems that are supported in repository gate: programming problems and bundle problems.
 
 Creating problems
 -----------------
 
-To create a new problem in Sandalphon, perform these steps:
+To create a new problem, perform these steps:
 
-#. Open Sandalphon and click **Problems** on the left.
+#. Click **Problems** on the left.
 #. Click **Create New**.
 #. Fill in these values:
 

@@ -1,5 +1,5 @@
-Configurations
-==============
+Managing contest configurations
+===============================
 
 Creating contests
 -----------------

@@ -35,7 +35,7 @@ Configuring IDEA
 
 #. The main IDEA welcome screen will appear.
 
-   .. image:: _static/idea-main.jpg
+   .. image:: ../_static/idea-main.jpg
        :align: center
 
 #. Click **Configure** (lower right corner) -> **Plugins**. Then, install **Scala** plugin.
@@ -55,7 +55,7 @@ Suppose that you want to open Jophiel project.
 
 #. Make sure that the Jophiel project is opened correctly. In particular, make sure that all Jophiel project dependecies are present on the projects sidebar:
 
-   .. image:: _static/idea-jophiel.jpg
+   .. image:: ../_static/idea-jophiel.jpg
        :align: center
 
 #. You will notice that there are several warning boxes on the top-right corner:

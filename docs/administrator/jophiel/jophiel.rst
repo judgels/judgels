@@ -6,6 +6,7 @@ Jophiel is a Judgels application that authenticates and authorizes users in othe
 Jophiel uses OpenID Connect protocol.
 
 .. toctree::
+   :maxdepth: 1
 
-   jophiel_setup
-   jophiel_manual
+   setup
+   manual

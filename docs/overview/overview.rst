@@ -1,18 +1,25 @@
-Introduction
-============
+.. _overview:
 
-**Judgels** (**Judgment Angels**) is a set of modular applications for educational programming purposes. It was initiated by `Ikatan Alumni Tim Olimpiade Komputer Indonesia <http://blog.ia-toki.org/>`_ (English: Indonesia Computing Olympiad Alumni Association). It is designed to support:
+Introduction to Judgment Angels
+===============================
 
-- competitive programming contests,
-- competitive programming problem archive,
-- academic programming classes,
-- programming training courses,
-- etc.
+What's Judgment Angels?
+-----------------------
 
-It is open source. Anyone can view and use the codebase on `GitHub <https://github.com/judgels>`_.
+**Judgels** (**Judgment Angels**) is a set of modular applications for educational programming purposes, such as:
 
-Applications
-------------
+- creating and storing programming problems,
+- holding programming contests,
+- holding learning courses for programming,
+- discussing programming problems in forum,
+- and many more.
+
+Each user uses a single account to access all services.
+
+It is initiated by `Ikatan Alumni Tim Olimpiade Komputer Indonesia <http://blog.ia-toki.org/>`_ (English: Indonesia Computing Olympiad Alumni Association).
+
+Judgels Applications
+--------------------
 
 Judgels consists of several applications that work with each other. Each application has a codename after a Greek archangel name.
 
@@ -30,30 +37,23 @@ The applications are designed to be modular. For example, multiple instances of 
 
 Judgels applications are still being heavily developed and do not have any stable releases yet. Anyone can try at their own risks.
 
-Framework
----------
-
-All Judgels applications, except Gabriel, are developed using `Play Framework 2.4.2 (Java) <https://www.playframework.com>`_. For convenience, we will call them **Judgels Play applications**. The Java version used is Java 8. Gabriel is written in Java 8, and uses `Moe Contest Environment <http://www.ucw.cz/moe/>`_ for the sandbox.
-
-License
--------
-
-Judgels is licensed using GNU GPL version 2.
-
-Developers
+Repository
 ----------
+
+Judgels is open source. The whole source code is hosted in GitHub: `https://github.com/judgels <https://github.com/judgels>`_.
+
+Credits
+-------
 
 This project is currently being developed by the following people, each in alphabetical order.
 
-Maintainers
-***********
+**Maintainers**
 
 - Ashar Fuadi (`@fushar <https://github.com/fushar/>`_)
 - Jordan Fernando (`@dragoon20 <https://github.com/dragoon20/>`_)
 - Petra Novandi Barus (project manager) (`@petrabarus <https://github.com/petrabarus/>`_)
 
-Contributors
-************
+**Contributors**
 
 - Bagus Seto Wiguno (`@bswig <https://github.com/bswig/>`_)
 - Deny Prasetyo (`@jasoet <https://github.com/jasoet/>`_)
@@ -65,4 +65,9 @@ Contributors
 - Brian Marshal
 - William Gozali
 
-Public contributions are welcome. Please consult the Developer's Guide on how Judgels works in detail.
+Public contributions are welcome. Please consult the Developer's Guide on how Judgels works in details.
+
+License
+-------
+
+Judgels is licensed using GNU GPL version 2.

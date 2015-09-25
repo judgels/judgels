@@ -1,5 +1,5 @@
-Contestants
-===========
+Managing contestants
+====================
 
 Team-based contests
 -------------------

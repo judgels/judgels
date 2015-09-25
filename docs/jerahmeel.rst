@@ -1,4 +1,0 @@
-Jerahmeel (Training Gate)
-=========================
-
-TBA

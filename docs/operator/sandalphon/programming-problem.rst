@@ -1,5 +1,7 @@
-Programming problems
-====================
+.. _ops_sandalphon_managing-programming-problems:
+
+Managing programming problems
+=============================
 
 Currently, only **blackbox**-type programming problems are supported. Blackbox means that contestant submissions are graded based on the outputs on the provided **test cases**. The submission source code is not checked.
 

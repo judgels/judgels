@@ -1,5 +1,5 @@
-Problems
-========
+Managing problems
+=================
 
 Adding problems to contests
 ---------------------------

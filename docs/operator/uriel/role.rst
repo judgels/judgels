@@ -1,5 +1,5 @@
-Roles
-=====
+Managing roles
+==============
 
 New contests can only be created by admins.
 

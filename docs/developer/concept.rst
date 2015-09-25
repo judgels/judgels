@@ -70,7 +70,7 @@ Judgels Play applications are built on top of Play framework. In Play framework,
 
 It will be easier to explain with a diagram. Suppose that a user wants to change his profile on Jophiel. Here is the flow of events that will happen in Jophiel, numbered from 1 through 11. For completeness, we will explain from the start of Jophiel. Each component will be explained along with the explanation of the events.
 
-.. image:: _static/judgels-web-flow.png
+.. image:: ../_static/judgels-web-flow.png
     :align: center
 
 #. Admin starts Jophiel, using :code:`judgels start jophiel` or :code:`judgels run jophiel` command.
