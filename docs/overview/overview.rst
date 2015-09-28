@@ -1,7 +1,7 @@
 .. _overview:
 
-Introduction to Judgment Angels
-===============================
+Overview of Judgment Angels
+===========================
 
 What's Judgment Angels?
 -----------------------
@@ -16,21 +16,22 @@ What's Judgment Angels?
 
 Each user uses a single account to access all services.
 
-It is initiated by `Ikatan Alumni Tim Olimpiade Komputer Indonesia <http://blog.ia-toki.org/>`_ (English: Indonesia Computing Olympiad Alumni Association).
+This project was initiated by `Ikatan Alumni Tim Olimpiade Komputer Indonesia <http://blog.ia-toki.org/>`_ (English: Indonesia Computing Olympiad Alumni Association).
 
-Judgels Applications
+Judgels applications
 --------------------
 
 Judgels consists of several applications that work with each other. Each application has a codename after a Greek archangel name.
 
-At the moment, there are seven applications in Judgels:
+At the moment, there are eight applications in Judgels:
 
 #. **Jophiel** (Single Sign-On) : authenticates and authorizes users in other applications.
-#. **Sandalphon** (Repository Gate): stores programming problems and lessons.
+#. **Sandalphon** (Repository Gate): stores problems and lessons.
 #. **Sealtiel** (Message Gate): provides message queues and transmissions between applications.
 #. **Uriel** (Competition Gate): holds programming contests.
-#. **Michael** (Alchemy Gate): monitors machines used for other applications.
+#. **Michael** (Alchemy Gate): monitors machines used for running other applications.
 #. **Jerahmeel** (Training Gate): holds programming training and provides problem archive.
+#. **Ragual** (Forum): place for discussions.
 #. **Gabriel** (Grader): grades programming submissions.
 
 The applications are designed to be modular. For example, multiple instances of Uriel can share the same Sandalphon and Jophiel instance. They are also designed to be distributed: the required application instances do not have to be installed in one single machine. We can install one application in one machine and some others in other machines.
