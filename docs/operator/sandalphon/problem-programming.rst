@@ -1,9 +1,9 @@
-.. _ops_sandalphon_managing-programming-problems:
-
 Managing programming problems
 =============================
 
-Currently, only **blackbox**-type programming problems are supported. Blackbox means that contestant submissions are graded based on the outputs on the provided **test cases**. The submission source code is not checked.
+A programming problem here is a typical **blackbox** competitive programming problem. Blackbox means that contestant submissions are graded based on the outputs on the provided **test cases**. The submission source code is not checked.
+
+Currently, the allowed programming languages are Pascal, C, C++, and Python 3 only.
 
 The specific configuration for programming problems can be found in **Grading** tab.
 

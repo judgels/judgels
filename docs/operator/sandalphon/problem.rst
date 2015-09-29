@@ -1,60 +1,35 @@
 Managing problems
 =================
 
+In this section, you will learn how to write a problem and configure it.
+
 Problem types
 -------------
 
-Currently, there are two types of problems that are supported in repository gate: programming problems and bundle problems.
+There are two types of problems that are supported in Repository Gate: **programming** problems and **bundle** problems.
 
-Creating problems
------------------
+A programming problem is a typical competitive programming problem which has a set of test cases used for grading contestant's solution.
 
-To create a new problem, perform these steps:
+A bundle problem is a non-programming problem each containing several items. Currently, an item can only be a simple statement or a multiple-choice question.
 
-#. Click **Problems** on the left.
-#. Click **Create New**.
-#. Fill in these values:
-
-   Type
-       The problem type.
-
-   Name
-       The problem name.
-
-   Additional Note
-       Any additional note. For example, problem tags, contests that have used the problems, etc.
-
-   Initial Language
-       The initial language of the problem statement. Later, you can add other languages.
-#. Click **Create New**.
-
-Managing statements
+Problems components
 -------------------
 
-After you created a problem, you can view and update the statement(s).
+When creating a new problem, you have to specify these components.
 
-Media
-    You can insert images to the statement. Upload the image as media file in the **Media** subtab, and then insert it to the statement by adding an image with this URL: **render/<imageFilename>**. Currently only images are supported.
+Type
+   The problem type.
 
-Languages
-    You can have multiple languages of the statements. You can add new languages in the **Languages** subtab. **Default language** is the default language shown to the user. You can also disable a language. When viewing problem statement, users can switch languages.
+Slug
+   A "code" or "identifier" for the problem. The format is dash-separated words each consisting of lowercase letters. For example: **a-plus-b**, **tree-reconstruction**, etc.
 
-    Currently, problem names cannot be translated.
+Additional Note
+   Any additional note. For example, problem tags, contests that have used the problems, etc.
 
-Managing partners
------------------
+Initial Language
+   The initial language of the problem statement. Later, you can add other languages.
 
-You can share the privilege to modify the problem you created to other users (called "partners"). Add the username of the user you want to share, in the **Partners** subtab. You can specify the permissions you want to grant.
 
-Managing versions
------------------
+Next, please see :ref:`operator_sandalphon_resource-common` for documentation of common features in resources.
 
-Every changes to a problem will be tracked in a version control. Every time you finished making a change, you have to **commit** your change. When you commit, one of the following events will happen:
-
-- The commit succeeded. Your changes will be recorded.
-- New commits have been made since you started editing. You will be prompted to update your local working copy. Click **Update Working Copy**. One of the following events will happen:
-
-  - Update working copy succeeded. You can continue committing.
-  - Update working copy failed. Your changes conflicts with the previous commits. Currently, there is no solution. You have to remember/save your changes somewhere and then click **Discard Local Changes** to discard your changes and load the latest version.
-
-Note that you can also update working copy or discard local changes any time during your modification.
+In the next sections, you will learn about specific configurations for different types of problems.
