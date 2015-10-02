@@ -3,9 +3,9 @@
 Managing contest clarifications
 ===============================
 
-To enable clarifications in the contest, enable the **Clarification** module.
+To enable clarifications in the contest, enable the **Clarifications** module.
 
-If you want that clarifications can only be made for a specified duration after the contest begins, enable the **Clarification Time Limit** module. You can then specify the duration since the contest begins.
+If you want that clarifications can only be made for a specified duration after the contest begins, enable the **Clarifications Time Limit** module. You can then specify the duration since the contest begins.
 
 Clarifications behave differently for contestants, supervisors, and coaches.
 

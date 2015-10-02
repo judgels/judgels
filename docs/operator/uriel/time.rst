@@ -25,6 +25,6 @@ Virtual contests are useful for conducting an online contest which have specifie
 Paused
 ------
 
-If **Pause** module is enabled, then the contestants cannot "do" the contest, i.e. submittion solutions or creating clarifications. This is useful when there is something wrong with the grader and you want to fix it, therefore you must stop any submissions.
+If **Paused** module is enabled, then the contestants cannot "do" the contest, i.e. submittion solutions or creating clarifications. This is useful when there is something wrong with the grader and you want to fix it, therefore you must stop any submissions.
 
 The contest will end at the scheduled time -- no additional time is added if you pause contests.

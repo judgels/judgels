@@ -18,7 +18,7 @@ Conflicting modules
 Registration
 ------------
 
-Allows public users to register the contest.
+Allows public users to register to the contest.
 
 Configurations
 **************
@@ -29,7 +29,7 @@ Registration start time
 Registration duration
     How long users can register since the start time.
 
-Manual approval?
+Requires manual approval?
     Whether supervisors must manually approves the registrants.
 
 Max registrants
@@ -68,7 +68,7 @@ Virtual contest duration
 Conflicting modules
 *******************
 
-- Frozen Scoreboard
+- Freezable Scoreboard
 
 Paused
 ------
@@ -93,17 +93,17 @@ Make a virtual, team-based contest to be able to be started by the external pers
 Configurations
 **************
 
-Triggered by
+Contest will be started by
     Who can trigger the contest. Currently can only be set to coach.
 
 Required modules
 ****************
 
 - Virtual
-- Team
+- Teams
 
-Passwords
----------
+Password
+--------
 
 Set passwords that must be typed by the contestants before they can enter the contest.
 
@@ -140,8 +140,8 @@ Configurations
 Incognito scoreboard?
     Whether a contestant can only see their own scores in the scoreboard.
 
-Frozen Scoreboard
------------------
+Freezable Scoreboard
+--------------------
 
 Allow the scoreboard to be frozen.
 
@@ -151,7 +151,7 @@ Configurations
 Scoreboard freeze time
     When the scoreboard will freeze, specified as duration before the contest ends.
 
-Official scoreboard allowed?
+Scoreboard has been unfrozen?
     If this is checked, scoreboard will be unfrozen.
 
 Required modules

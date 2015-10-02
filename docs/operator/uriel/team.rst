@@ -3,7 +3,7 @@
 Managing contest teams
 ======================
 
-A team-based contest can be conducted in Competition Gate. To enable team-based contest, enable **Team** module. Teams can be assigned in the **Teams** tab.
+A team-based contest can be conducted in Competition Gate. To enable team-based contest, enable **Teams** module. Teams can be assigned in the **Teams** tab.
 
 A team consists of
 
