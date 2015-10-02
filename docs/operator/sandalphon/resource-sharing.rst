@@ -1,3 +1,5 @@
+.. _operator_sandalphon_resource-sharing:
+
 Sharing resources to clients
 ============================
 

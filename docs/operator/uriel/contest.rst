@@ -1,78 +1,71 @@
 Managing contests
 =================
 
-Creating contests
------------------
+A contest can **only** be created by an operator with **admin** role. After the contest has been created, the admin can then assign one or more **managers** to it. The managers or the admin themselves will configure the contests.
 
-#. Open Uriel and click **Contests** on the left.
-#. Click **Create New**.
-#. Fill in the values. Most fields are self-explanatory. The ones that aren't are:
+Contest components
+------------------
 
-   Exclusive Contests?
-       If true, then if this contest is running for a contestant, then the he cannot access the other contests.
+When you create a new contest, you will be presented with the following fields.
 
-   Use Scoreboard?
-       Whether to enable scoreboard in the contest.
+Name
+    The contest name.
 
-   Incognite Scoreboard?
-       If true, then a contestant can only view his score in the scoreboard.
+Description
+    The contest description that will be shown to the public. Can contain promotion text so that users register to this contest, etc.
 
-   Requires Password
-       Whether a contestant must type a contest password to enter a contest.
+Style
+    Currently two styles are supported: ICPC-style and IOI-style contests. Further details will be given in the next sections.
 
-The configuration you just filled above is general configuration. Specific configuration are available depending on the classification below.
+Contest managements aspects
+---------------------------
 
-Contest classifications
------------------------
+Contest managements refer to configuring contest before the contest starts and supervising contest during the contest.
 
-Contests in Uriel are classified based on three aspects: **types**, **scopes**, and **styles**.
+Contest managements are divided into several aspects. Each aspect can consist of configuration units called **contest modules**. Each module can be enabled or disabled (almost) independently. Some contest modules also have module configurations that can be further specified when the modules are enabled.
 
-Contest types
-*************
+Here is an overview of contest management aspects:
 
-Standard
-    A normal contest with fixed contest times. Configuration specific to this type are:
+:ref:`operator_uriel_style`
+    How to configure settings related to the contest style, such as ICPC time penalty etc, allowed programming languages, etc.
 
-    Scoreboard freeze time
-        When to freeze the scoreboard.
+:ref:`operator_uriel_scope`
+    How to control who can access the contest, can users register to the contest, etc.
 
-    Official scoreboard allowed?
-        Whether to show the official (unfrozen) scoreboard.
+:ref:`operator_uriel_time`
+    How to specify the duration of the contest, can the contest be started virtually, etc.
 
-Virtual
-    A contest where the contestants can choose when they start their contest themselves. Configuration specific to this type are:
+:ref:`operator_uriel_person`
+    How to add people with different roles to the contest: managers, supervisors, and contestants.
 
-    Contest duration
-        The duration of the contest for each contestant.
+:ref:`operator_uriel_problem`
+    How to add problems from Repository Gate to the contest.
 
-    Who can start the contest?
-        Can be Contestant (for indivudal contests) or Coach (for team-based contests).
+:ref:`operator_uriel_team`
+    How to make the contest team-based.
 
-Contest scopes
-**************
+:ref:`operator_uriel_trigger`
+    How to control who can start the contest.
 
-Public
-    Everyone can join this contest. Configuration specific to this type are:
+:ref:`operator_uriel_password`
+    How to set passwords in the contest.
 
-    Register start time
-        Registration start time.
+:ref:`operator_uriel_announcement`
+    How to use announcements in the contest.
 
-    Register end time
-        Registration end time.
+:ref:`operator_uriel_clarification`
+    How to enable and use clarifications in the contest.
 
-    Max registrants
-        0 for unlimited.
+:ref:`operator_uriel_submission`
+    How to view and regrade submissions in the contest.
 
-Private
-    A user must be added manually to this contest to participate.
+:ref:`operator_uriel_scoreboard`
+    How to enable scoreboards in the contest, set scoreboard freeze time, etc.
 
-Contest styles
-**************
+:ref:`operator_uriel_file`
+    How to upload public files in a contest.
 
-IOI
-    IOI-style contest.
+:ref:`operator_uriel_lock`
+    How to lock a contest after it ends.
 
-ICPC
-    ICPC-style contest. Currently NOT IMPLEMENTED.
-
-Both styles have language restriction specific configuration. Ultimately, the languages allowed for a problem in a contest are, the intersection of languages allowed for the problem in Sandalphon, and languages allowed for the contest.
+Finally, the full references of all contest modules are available in :ref:`operator_uriel_module`.

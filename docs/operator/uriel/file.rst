@@ -1,4 +1,6 @@
-Managing files
-==============
+.. _operator_uriel_file:
 
-You can upload files to a contest and have the link available in announcements. Upload the file in the **Files** tab. Then, you can insert the link in announcements as **download/<filename>**.
+Managing contest files
+======================
+
+You can upload files to the contest and have the links available in announcements. Enable the **File** module. Then, upload the file in the **Files** tab. You can then insert the link in announcements as a link with the url **download/<filename>**.
