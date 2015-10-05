@@ -5,6 +5,8 @@ Operator's Guide
 
 This guide is intended for people who want to operate and manage existing Judgels applications.
 
+**Table of Contents**
+
 .. toctree::
    :maxdepth: 1
 
