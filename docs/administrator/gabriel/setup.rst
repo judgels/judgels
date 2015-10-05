@@ -4,6 +4,8 @@ Setup
 Requirements
 ------------
 
+Internally, Gabriel runs the contestants' programs in a sandbox: `Moe Contest Environment <http://www.ucw.cz/moe/>`_.
+
 The following are necessary for install Gabriel and the Moe sandbox correctly.
 
 - Linux. We have only tested Gabriel in Ubuntu 14.04, so we recommend you to use it. Note that Moe cannot be installed in Windows or OS X.

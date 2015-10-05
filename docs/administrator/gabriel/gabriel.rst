@@ -1,7 +1,14 @@
 Gabriel (Grader)
 ================
 
-Gabriel's job is receiving programming submissions, grading them, and then sending back the results, via Sealtiel. Internally, it runs the contestants' programs in a sandbox: `Moe Contest Environment <http://www.ucw.cz/moe/>`_.
+In this section, you will learn how to:
+
+- Install Gabriel.
+- Install the sandbox engine (Moe).
+- Configure Gabriel.
+- Running the graders.
+
+**Table of Contents**
 
 .. toctree::
    :maxdepth: 1
