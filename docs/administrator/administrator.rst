@@ -1,7 +1,11 @@
 .. _administrator:
 
-Introduction for Judgels Administrator
-======================================
+Administrator's Guide
+=====================
+
+This guide is intended for people who want to set up working Judgels application instances.
+
+**Table of Contents**
 
 .. toctree::
    :maxdepth: 1
