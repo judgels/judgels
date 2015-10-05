@@ -4,7 +4,17 @@ Setup
 Installing dependencies
 -----------------------
 
-As described in the previous section, Sandalphon depends on Jophiel, Sealtiel, and Gabriel. Make sure you have installed them.
+Sandalphon depends on other Judgels applications to run correctly. Here is the dependency diagram.
+
+.. image:: ../../_static/sandalphon-deps.png
+    :align: center
+
+An arrow pointing from A to B means that A depends on B. The dependencies between applications are described as follows.
+
+A. Sandalphon connects to Jophiel for user authentication and authorization.
+B. Sandalphon connects to Sealtiel for sending grading requests and polling grading responses.
+C. Gabriel connects to Sealtiel for polling grading requests and sending grading responses.
+D. Gabriel connects to Sandalphon for fetching test cases.
 
 Installing Sandalphon
 ---------------------
@@ -32,22 +42,6 @@ Running Sandalphon
 
 See :ref:`Running Judgels Play applications <play_run>`.
 
-Configuring Gabriel
--------------------
-
-Finally, add Gabriel as a Sandalphon's grader. This is required to allow Gabriel to fetch test cases from Sandalphon. It is worth noting that Gabriel connects directly to Sandalphon for fetching test cases, not via Sealtiel, since this should be a synchronous operation.
-
-#. Open Sandalphon and click **Graders** menu on the left.
-#. Click **Create New**.
-#. Fill in these values:
-
-   Name
-       The grader name. For example: **Gabriel #1**.
-
-#. Click **Create New**.
-
-Assign the JID and secret you obtained to Gabriel's **sandalphon.clientJid** and **sandalphon.clientSecret**. Assign Gabriel's **sandalphon.baseUrl** to Sandalphon's base URL.
-
 Adding initial admin
 --------------------
 
@@ -55,4 +49,4 @@ Sandalphon has been successfully installed and configured. Now, we need to have 
 
 #. Find your user JID in Jophiel.
 #. Set the **roles** column to **user,admin** in the corresponding row (that contains your user JID) in the **sandalphon_user** table.
-#. Re-log in to Sandalphon. Verify that you can view the **Clients** menu on the left.
+#. Re-log in to Sandalphon. Verify that you can view the **Clients** and **Graders** menu on the left.
