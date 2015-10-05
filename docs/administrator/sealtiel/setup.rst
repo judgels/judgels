@@ -4,7 +4,7 @@ Setup
 Installing RabbitMQ
 -------------------
 
-Sealtiel internally uses RabbitMQ. So, it must be installed first. Follow the installation instruction here: `Downloading and Installing RabbitMQ <https://www.rabbitmq.com/download.html>`_. Make sure you install at least version **3.5.x**.
+Sealtiel internally uses **RabbitMQ**. So, it must be installed first. Follow the installation instruction here: `Downloading and Installing RabbitMQ <https://www.rabbitmq.com/download.html>`_. Make sure you install at least version **3.5.x**.
 
 Starting RabbitMQ
 -----------------

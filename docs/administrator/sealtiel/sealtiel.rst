@@ -1,9 +1,15 @@
 Sealtiel (Message Gate)
 =======================
 
-Sealtiel is the bridge that handles asynchronous messages between Judgels applications. Currently it is only used for delivering grading requests and responses between Gabriel and the other Judgels applications.
+In this section, you will learn how to:
 
-Internally, Sealtiel uses `RabbitMQ <http://rabbitmq.com>`_.
+- Install Sealtiel.
+- Install the message queue service (RabbitMQ).
+- Configure Sealtiel.
+- Adding Sealtiel clients.
+- Watching messages.
+
+**Table of Contents**
 
 .. toctree::
    :maxdepth: 1
