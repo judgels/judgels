@@ -1,9 +1,15 @@
 Jophiel (Single Sign-On)
 ========================
 
-Jophiel is a Judgels application that authenticates and authorizes users in other Judgels applications. The motivation is that a user should have only a single account accross all Judgels applications.
+In this section, you will learn how to:
 
-Jophiel uses OpenID Connect protocol.
+- Install Jophiel.
+- Configure Jophiel.
+- Grant administrator access to users.
+- Add Jophiel clients.
+- Use additional features for administrators.
+
+**Table of Contents**
 
 .. toctree::
    :maxdepth: 1
