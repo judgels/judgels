@@ -126,8 +126,20 @@ play.http.session.secure
 <app>.baseDataDir
     The absolute path of a local directory that hosts this application's data files. For example: "/home/user/judgels/data/jophiel".
 
-googleAnalytics.{use, id}
-    Set **use** to true to enable Google Analytics reporting. If used, set **id** to the Google Analytics ID.
+link.canonicalUrl
+    The same value as **<app>.baseUrl**.
+
+seo.{metaKeywords, metaDescription}
+    SEO meta keywords and description.
+
+google.analytics.*
+    See optional features section below.
+
+google.serviceAccount.*
+    See optional features section below.
+
+redis.*
+    See optional features section below.
 
 Database configuration
 **********************
@@ -149,6 +161,58 @@ Akka configuration
 Akka is used for concurrency management. It is safe to use the default configuration without modification.
 
 .. _play_run:
+
+Setting up optional features
+----------------------------
+
+Google Analytics reporting
+**************************
+
+This corresponds to **google.analytics.\*** keys in **application.conf**.
+
+Set **use** to true to enable Google Analytics reporting.
+
+If used, set **id** to the Google Analytics ID. You should have different views for each Judgels Play application. You will have a unique view ID in Google Analytics. Set **viewId** to that ID.
+
+Google Service Account
+**********************
+
+This corresponds to **google.serviceAccount.\*** keys in **application.conf**.
+
+Set **use** to true to enable pulling Google Analytics reporting.
+
+If used, go to Google Developers Console and register a credentials. Set the appropriate values then. Currently it is only used for showing current active users.
+
+.. note::
+
+    It is an **EXPERIMENTAL** feature as there is limit on the number of requests, so it is usually turned off now.
+
+Redis
+*****
+
+You can use in-memory cache Redis for performance.
+
+To use Redis:
+
+- Set up a working Redis installation.
+- Modify **redis.\*** keys in **application.conf** accordingly.
+- In **application.conf**, modify
+
+  .. sourcecode:: bash
+
+        enabled += "org.iatoki.judgels.sandalphon.config.<app>Module"
+
+  to
+
+  .. sourcecode:: bash
+
+      enabled += "org.iatoki.judgels.sandalphon.config.<app>JedisModule"
+
+
+.. note::
+
+    It is an **EXPERIMENTAL** feature. The only things that are cached are queries to IDs.
+
 
 Running Judgels Play applications
 ---------------------------------
