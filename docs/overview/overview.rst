@@ -25,14 +25,30 @@ Judgels consists of several applications that work with each other. Each applica
 
 At the moment, there are eight applications in Judgels:
 
-#. **Jophiel** (Single Sign-On) : authenticates and authorizes users in other applications.
-#. **Sandalphon** (Repository Gate): stores problems and lessons.
-#. **Sealtiel** (Message Gate): provides message queues and transmissions between applications.
-#. **Uriel** (Competition Gate): holds programming contests.
-#. **Michael** (Alchemy Gate): monitors machines used for running other applications.
-#. **Jerahmeel** (Training Gate): holds programming training and provides problem archive.
-#. **Ragual** (Forum): place for discussions.
-#. **Gabriel** (Grader): grades programming submissions.
+Jophiel (Single Sign-On)
+    Authenticates and authorizes users in other Judgels applications. The motivation is that a user should have only a single account accross all Judgels applications. It uses OpenID Connect protocol.
+
+Sealtiel (Message Gate)
+    The bridge that handles asynchronous messages between Judgels applications. Currently it is only used for delivering grading requests and responses between Gabriel and other Judgels applications that need grading.
+
+Sandalphon (Repository Gate)
+    Stores programming resources, for example, problems and lessons. The resources can then be used by other Judgels applications, like Uriel and Jerahmeel.
+
+Uriel (Competition Gate)
+    Holds programming contests.
+
+Jerahmeel (Training Gate)
+    Holds programming training and problemsets archive.
+
+Raguel (Forum)
+    Place for discussions.
+
+Gabriel (Grader)
+    Grades programming submission requests from Sandalphon/Uriel/Jerahmeel in a sandbox, then sends back the results via Sealtiel.
+
+Michael (Alchemy Gate)
+    **[EXPERIMENTAL]** Monitors machines used for running other applications.
+
 
 The applications are designed to be modular. For example, multiple instances of Uriel can share the same Sandalphon and Jophiel instance. They are also designed to be distributed: the required application instances do not have to be installed in one single machine. We can install one application in one machine and some others in other machines.
 
