@@ -24,21 +24,21 @@ Specific requirements for each Judgels application will be mentioned on the resp
 Installing main repository
 --------------------------
 
-Judgels consists of many repositories. Create a directory that will store Judgels repositories. We will denote it as Judgels base directory. There must be only one Judgels base directory even though more than one applications will be installed on the machine.
+Judgels consists of many repositories. Create a directory that will store Judgels repositories. We will denote it as Judgels home. There must be only one Judgels home even though more than one applications will be installed on the machine.
 
 First, clone the main Judgels repository. This repository will act as a gate to the other Judgels repositories.
 
 .. sourcecode:: bash
 
-    cd <your-Judgels-base-directory>
+    cd <your-Judgels-home>
     git clone https://github.com/judgels/judgels
 
 Then, we will install Judgels terminal script that will enable many convenience commands in the terminal. Open your **~/.bashrc**, and add the following lines.
 
 .. sourcecode:: bash
 
-    export JUDGELS_BASE_DIR=<your-Judgels-base-directory>
-    alias judgels="python3 $JUDGELS_BASE_DIR/judgels/scripts/terminal.py"
+    export JUDGELS_HOME=<your-Judgels-home>
+    alias judgels="python3 $JUDGELS_HOME/judgels/scripts/terminal.py"
 
 Restart your terminal to activate the script.
 
@@ -53,7 +53,7 @@ First, download Activator:
 
 .. sourcecode:: bash
 
-    cd $JUDGELS_BASE_DIR
+    cd $JUDGELS_HOME
     judgels/scripts/download-activator.sh
 
 Then, add this line to your **.bashrc**:
@@ -165,9 +165,9 @@ Production mode
 
 In production mode, we will deploy standalone executable files without the source code.
 
-#. Run the :code:`judgels dist <app>` command. It will create a zip file JUDGELS_BASE_DIR/dist/**<app>-<version>.zip**.
-#. Copy the zip file to the target machine, in its own JUDGELS_BASE_DIR/dist directory.
-#. Unzip the file. There should be a directory JUDGELS_BASE_DIR/dist/<app>-<version>.
+#. Run the :code:`judgels dist <app>` command. It will create a zip file JUDGELS_HOME/dist/**<app>-<version>.zip**.
+#. Copy the zip file to the target machine, in its own JUDGELS_HOME/dist directory.
+#. Unzip the file. There should be a directory JUDGELS_HOME/dist/<app>-<version>.
 #. If you run in HTTPS, you have to create a directory **conf** inside the above directory. This is probably a Play framework bug, and has been reported in this `GitHub issue <https://github.com/playframework/playframework/issues/4820>`_.
 #. Run the :code:`judgels start <app> <version>` or :code:`judgels start-https <app> <version>` command.
 

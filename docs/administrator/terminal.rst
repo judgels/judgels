@@ -18,8 +18,8 @@ Open your **~/.bashrc** (or create one), and add the following lines.
 
 .. sourcecode:: bash
 
-    export JUDGELS_BASE_DIR=<your-Judgels-base-directory>
-    alias judgels="python3 $JUDGELS_BASE_DIR/judgels/scripts/terminal.py"
+    export JUDGELS_HOME=<your-Judgels-home>
+    alias judgels="python3 JUDGELS_HOME/judgels/scripts/terminal.py"
 
 Restart your terminal to activate the script.
 

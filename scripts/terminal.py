@@ -6,7 +6,7 @@ import sys
 import zipfile
 from collections import OrderedDict
 
-JUDGELS_BASE_DIR = os.environ['JUDGELS_BASE_DIR']
+JUDGELS_HOME = os.environ['JUDGELS_HOME']
 
 JUDGELS_APPS = OrderedDict(sorted({
     'jophiel'    : 9001,
@@ -101,11 +101,11 @@ def assert_app_known(app):
 
 def assert_repo_exists(repo):
     if not repo_exists(repo):
-        die('Git repository {} not exist in {}'.format(repo, JUDGELS_BASE_DIR))
+        die('Git repository {} not exist in {}'.format(repo, JUDGELS_HOME))
 
 
 def get_repo_dir(repo):
-    return '{}/{}'.format(JUDGELS_BASE_DIR, repo)
+    return '{}/{}'.format(JUDGELS_HOME, repo)
 
 
 def get_repo_and_all_deps(repo):
@@ -118,7 +118,7 @@ def get_repo_and_all_deps(repo):
 
 
 def get_app_pid_file(app):
-    return '{}/dist/{}.pid'.format(JUDGELS_BASE_DIR, app)
+    return '{}/dist/{}.pid'.format(JUDGELS_HOME, app)
 
 
 def get_app_pid(app):
@@ -149,7 +149,7 @@ def dist(repo):
     execute('activator dist', get_repo_dir(repo))
 
     dist_zip = '{}/target/universal/{}-{}.zip'.format(get_repo_dir(repo), repo, repo_version)
-    dist_dest_dir = '{}/dist'.format(JUDGELS_BASE_DIR)
+    dist_dest_dir = '{}/dist'.format(JUDGELS_HOME)
 
     os.makedirs(dist_dest_dir, exist_ok=True)
     shutil.copy(dist_zip, dist_dest_dir)
@@ -179,7 +179,7 @@ def pull(repo):
             execute('git pull --rebase origin master', get_repo_dir(rep))
             print()
         else:
-            execute('git clone https://github.com/judgels/{}.git'.format(rep), JUDGELS_BASE_DIR)
+            execute('git clone https://github.com/judgels/{}.git'.format(rep), JUDGELS_HOME)
 
 
 def push(repo):
@@ -233,7 +233,7 @@ def start(app, version, port):
     command = 'bin/{}'.format(app) + \
               ' -Dpidfile.path=../{}.pid'.format(app) + \
               ' -Dhttp.port={}'.format(port)
-    execute(command, '{}/dist/{}-{}'.format(JUDGELS_BASE_DIR, app, version))
+    execute(command, '{}/dist/{}-{}'.format(JUDGELS_HOME, app, version))
 
 
 def start_https(app, version, port):
@@ -245,7 +245,7 @@ def start_https(app, version, port):
     command = 'bin/{}'.format(app) + \
               ' -Dpidfile.path=../{}.pid'.format(app) + \
               ' -Dhttp.port=disabled -Dhttps.port={}'.format(port)
-    execute(command, '{}/dist/{}-{}'.format(JUDGELS_BASE_DIR, app, version))
+    execute(command, '{}/dist/{}-{}'.format(JUDGELS_HOME, app, version))
 
 
 def status():
