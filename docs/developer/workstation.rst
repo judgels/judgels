@@ -8,6 +8,20 @@ Codebase setup
 
 Basically, you have to follow all instructions on :ref:`main Judgels setup <setup>`. Make sure you are able to run/start the Judgels applications you want to develop.
 
+In addition, you are required to download Checkstyle configuration:
+
+.. sourcecode:: bash
+
+    cd $JUDGELS_HOME
+    judgels/scripts/download-checkstyle.sh
+
+Ensure that you can run Checkstyle:
+
+.. sourcecode:: bash
+
+    cd <any-judgels-repo>
+    activator checkstyle
+
 IDE setup
 ---------
 
