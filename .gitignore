@@ -19,3 +19,4 @@ conf/*.conf
 application-log*
 docs/env
 checkstyle.jar
+activator/
