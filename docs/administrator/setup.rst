@@ -108,11 +108,14 @@ Application configuration
 
 The configuration file to modify is **conf/application.conf**.
 
-application.title
+general.title
     The displayed title/name of application. For example: "Public Competition Gate".
 
-application.copyright
+general.copyright
     The displayed copyright/institution name that hosts the application. For example: "XXX University".
+
+general.canonicalUrl
+    The same value as **<app>.baseUrl**.
 
 play.crypto.secret
     Play framework's secret key for cryptographics functions. The default value must be changed for security. See https://www.playframework.com/documentation/2.4.x/ApplicationSecret for more details.
@@ -125,9 +128,6 @@ play.http.session.secure
 
 <app>.baseDataDir
     The absolute path of a local directory that hosts this application's data files. For example: "/home/user/judgels/data/jophiel".
-
-link.canonicalUrl
-    The same value as **<app>.baseUrl**.
 
 seo.{metaKeywords, metaDescription}
     SEO meta keywords and description.
@@ -196,17 +196,18 @@ To use Redis:
 
 - Set up a working Redis installation.
 - Modify **redis.\*** keys in **application.conf** accordingly.
-- In **application.conf**, modify
+- In **application.conf**, modify this single line
 
   .. sourcecode:: bash
 
-        enabled += "org.iatoki.judgels.sandalphon.config.<app>Module"
+      enabled += "org.iatoki.judgels.<app>.<app>Module"
 
-  to
+  into these two lines
 
   .. sourcecode:: bash
 
-      enabled += "org.iatoki.judgels.sandalphon.config.<app>JedisModule"
+      enabled += "com.typesafe.play.redis.RedisModule"
+      enabled += "org.iatoki.judgels.<app>.<app>JedisModule"
 
 
 .. note::
