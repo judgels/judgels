@@ -244,7 +244,8 @@ def start_https(app, version, port):
 
     command = 'bin/{}'.format(app) + \
               ' -Dpidfile.path=../{}.pid'.format(app) + \
-              ' -Dhttp.port=disabled -Dhttps.port={}'.format(port)
+              ' -Dhttp.port=disabled -Dhttps.port={}'.format(port) + \
+              ' -Dfile.encoding=UTF-8'
     execute(command, '{}/dist/{}-{}'.format(JUDGELS_HOME, app, version))
 
 
