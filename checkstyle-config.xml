@@ -65,6 +65,9 @@
        <property name="message" value="Line has trailing spaces."/>
     </module>
 
+    <!-- For @SuppressWarnings -->
+    <module name="SuppressWarningsFilter" />
+
     <!-- Checks for Headers                                -->
     <!-- See http://checkstyle.sf.net/config_header.html   -->
     <!-- <module name="Header"> -->
@@ -73,6 +76,9 @@
     <!-- </module> -->
 
     <module name="TreeWalker">
+
+        <!-- For @SuppressWarnings -->
+        <module name="SuppressWarningsHolder" />
 
         <!-- Checks for Javadoc comments.                     -->
         <!-- See http://checkstyle.sf.net/config_javadoc.html -->
