@@ -53,10 +53,12 @@ def check_output(command, working_dir):
 
 
 def execute(command, working_dir):
+    p = subprocess.Popen(['bash', '-c', command], cwd=working_dir)
     try:
-        subprocess.Popen(['bash', '-c', command], cwd=working_dir).wait()
+        p.wait()
     except KeyboardInterrupt:
-        pass
+        p.send_signal(signal.SIGINT)
+        p.wait()
 
 
 def read_file_to_string(file):
