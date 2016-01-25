@@ -48,19 +48,15 @@ def die(message):
 
 
 def check_output(command, working_dir):
-    p = subprocess.Popen(command.split(), cwd=working_dir, stdout=subprocess.PIPE)
+    p = subprocess.Popen(['bash', '-c', command], cwd=working_dir, stdout=subprocess.PIPE)
     return p.communicate()[0]
 
 
-def execute_list(command, working_dir):
+def execute(command, working_dir):
     try:
-        subprocess.Popen(command, cwd=working_dir).wait()
+        subprocess.Popen(['bash', '-c', command], cwd=working_dir).wait()
     except KeyboardInterrupt:
         pass
-
-
-def execute(command, working_dir):
-    execute_list(command.split(), working_dir)
 
 
 def read_file_to_string(file):
@@ -207,9 +203,9 @@ def release(version):
         if repo != 'moe':
             write_string_to_file(version, '{}/version.properties'.format(get_repo_dir(repo)))
             execute('git add version.properties', get_repo_dir(repo))
-            execute_list(['git', 'commit', '--allow-empty', '-m', 'Bump version {}'.format(version)], get_repo_dir(repo))
+            execute('git commit --allow-empty -m "Bump version {}"'.format(version), get_repo_dir(repo))
 
-        execute_list(['git', 'tag', '-a', 'v{}'.format(version), '-m', 'Version {}'.format(version)], get_repo_dir(repo))
+        execute('git tag -a v{} -m "Version {}"'.format(version, version), get_repo_dir(repo))
         execute('git push --tags origin master', get_repo_dir(repo))
         print()
 
