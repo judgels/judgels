@@ -196,18 +196,12 @@ To use Redis:
 
 - Set up a working Redis installation.
 - Modify **redis.\*** keys in **application.conf** accordingly.
-- In **application.conf**, modify this single line
-
-  .. sourcecode:: bash
-
-      enabled += "org.iatoki.judgels.<app>.<app>Module"
-
-  into these two lines
+- In **application.conf**, add two new modules:
 
   .. sourcecode:: bash
 
       enabled += "com.typesafe.play.redis.RedisModule"
-      enabled += "org.iatoki.judgels.<app>.<app>JedisModule"
+      enabled += "org.iatoki.judgels.play.jedis.JedisModule"
 
 
 .. note::
