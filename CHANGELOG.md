@@ -1,5 +1,136 @@
 # Change Logs
 
+## [0.8.0] - 2016-02-06
+
+### Overall
+
+#### Added
+- Add Redis support for DAOs (experimental).
+- Add banner support.
+- Add Google Analytics support.
+- Add SEO support.
+- Add guest viewable contents (can see pages without login).
+- Incorporate Checkstyle support during build.
+- Add api repository that contains Java API for connecting to other Judgels apps.
+
+#### Changed
+- Update Play Framework to 2.4.6.
+- Rename CRUD controller actions to be consistent and similar to RoR (edit/update, etc.)
+- Restruture packages a lot; now based on features, not services/models/controllers etc.
+- Restructure layouting system. See HtmlTemplate and AbstractJudgelsController.
+- Start using multiple Guice modules for pluggable components like banner and SEO.
+- Extract common functionalities to standalone JudgelsModule that is used by all Judgels apps.
+- Rename HTTP filter to JudgelsFilters.
+- Start migrating from Global.java to singletons that are eagerly loaded on start.
+- Restructure and rename some sections in application.conf.
+
+#### Removed
+- Activator in each repository. Now users download Activator themselves via script.
+- Unnecessary @ in routes.
+- Regex in routes. Replaced by intercepting bad request.
+- Duplicate font assets in each repository.
+- Application loader in configuration.
+- Global settings (Global.java) was supposed to be completely removed. However, it turns out that currently there is no way to load different persistence unit during dependency injection. Different persistence unit is required for doing data migration.
+
+#### Fixed
+- Strange keyboard not working bug after stopping (Ctrl-C) running app that was started using Python terminal command line utility.
+
+### Jophiel
+
+#### Added
+- Support session removal if invalid by checking if users still are logged in every certain interval.
+- Activity log suppots that can be sent by Jophiel client apps.
+- Download user data for admins.
+- User additional info for user profile like T-shirt size etc.
+
+#### Fixed
+- Various bug fixes.
+
+### Sandalphon
+
+#### Added
+- Slug as identifier for problems and lessons.
+- Ckeditor for lessons.
+- Multiline support for multiple choice items.
+- Add sandalphon-blackbox-adapters that contains views for grading engines.
+
+#### Changed
+- Set maximum file upload in grading and media to 512 MB.
+
+
+#### Fixed
+- Wrong numbering in viewing bundle choices when not in page one.
+- Sort bundle answers based on numbers.
+- Various bug fixes.
+
+
+### Sealtiel
+
+#### Changed
+- In database, change list of acquaintances into a many-to-many table.
+
+#### Removed
+- sealtiel-commons repository. Mostly all API functionality are moved to api repository.
+
+### Uriel
+
+#### Added
+- Contest features organized into modules.
+- Support tie-breaking for equal points in IOI-style contests.
+- Show contest times in contest list.
+- Alert if contest is being paused.
+- Add first accepted marks in ICPC scoreboard.
+- In submission context, contestJid -> containerJid.
+- Add problem name refresh feature.
+- Use threads for each contest scoreboard updater.
+
+#### Changed
+- Beautify contest module descriptions.
+- New contest is LIMITED by default.
+
+### Fixed
+- Various bug fixes.
+
+
+#### Removed
+- Problem secrets when viewing problem lists as supervisors.
+
+### Jerahmeel
+
+#### Added
+- Show progress on courses.
+- Show points on chapters.
+- Add various statistics as global widgets.
+- Add problem leaderboard widget.
+- Add submissions statistics for admins.
+- Disabled status for problems and lessons in courses.
+- Use caches from various user statistic scores.
+- Add Archives and Problem Sets menu.
+- Add "getOnlyFirstResult" to user item DAO, as a resolution for race condition when updating user item.
+- Add regrade all functionality in submission view.
+
+#### Changed
+- Rename session -> chapter.
+- "Completeable" concept now becomes courses and archives+problemsets. So, learning courses and contest archives are basically two different concepts now.
+
+### Raguel
+
+#### Added
+- Implement forum.
+
+### Gabriel
+
+#### Added
+- Add gabriel-blackbox repository that contains blackbox grading engines.
+- Add option to bypass testdata fetch if Sandalphon is on the same machine.
+
+
+#### Fixed
+- Fix deadlock after failed fetching test data from Sandalphon.
+- Fix result not sent when internal error.
+
+
+
 ## [0.7.0] - 2015-08-06
 
 ### Overall
@@ -21,6 +152,9 @@
 
 #### Added
 - Add welcome page containing links to Judgels apps.
+
+#### Fixed
+- Various bug fixes.
 
 ### Sandalphon
 
