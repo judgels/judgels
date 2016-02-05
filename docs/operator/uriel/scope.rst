@@ -19,6 +19,8 @@ A user need to register before they can join the contest.
 
 To enable registration, enable **Registration** module. In the module configuration, you can specify registration start and end times, and the maximum number of allowed registrants. By default, a registered user can automatically join the contest when the contest starts, unless you enable the **Manual Approval** option in the module configuration.
 
+If you want to gather users' organizations or institutions in the contest, simply enable **Organization** as well. Then, when a user registers, they must provide their organization.
+
 Public without registration
 ***************************
 

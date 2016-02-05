@@ -40,6 +40,16 @@ Conflicting modules
 
 - Limited
 
+Organization
+------------
+
+When enabled, users must enter their organization/institution when registering for the contest.
+
+Required modules
+****************
+
+- Registration
+
 Duration
 --------
 
