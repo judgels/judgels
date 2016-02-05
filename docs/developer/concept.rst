@@ -39,7 +39,7 @@ The main repository is the **judgels** repository. The responisibilites of this 
 - Hosting Judgels documentation.
 - Being the central GitHub issue tracker for all Judgels applications.
 
-For each Judgels application <app>, there will be a repository named **<app>**, which hosts the application code. In addition, for some Judgels applications, there is **<app>-commons** repository, which contains parts of the application that can be used by other applications that depend on it.
+For each Judgels application <app>, there will be a repository named **<app>**, which hosts the application code. In addition, for some Judgels applications, there is **<app>-commons** repository, which contains parts of the application that can be used by other applications that depend on it:
 
 commons
     Consists of basic dependencies used by all applications.
@@ -57,11 +57,21 @@ jophiel-commons
 sandalphon-commons
     Consists of components used by other Judgels applications for rendering problems and submitting solutions to Sandalphon.
 
-sealtiel-commons
-    Consists of components used by other Judgels applications for fetching and sending messages from Sealtiel.
-
 gabriel-commons
-    Consists of interfaces and implementations of grading engines.
+    Consists of interfaces of grading engines.
+
+There are also some repositories related to blackbox grading capability, which is the only grading capability right now.
+
+gabriel-blackbox
+    Consists of implementations of grading engines which are blackbox in nature.
+
+sandalphon-blackbox-adapters
+    Consists of views and forms for configuring grading in problems.
+
+Finally there is a repository that deals with Java API between Judgels apps:
+
+api
+    Deals with Java API between Judgels apps.
 
 Judgels Play application layers
 -------------------------------
