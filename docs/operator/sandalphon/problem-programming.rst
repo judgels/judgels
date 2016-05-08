@@ -42,7 +42,7 @@ Currently it is hardcoded to **300 KB**.
 Programming problem types
 -------------------------
 
-Blackbox problems are classified based on two aspects: **evaluation methods** and **scoring methods**. Based on evaluation methods, there are two types: **batch** and **interactive**. Based on scoring methods, there are two types: **with subtasks** and **without subtasks**.
+Blackbox problems are classified based on two aspects: **evaluation methods** and **scoring methods**. Based on evaluation methods, there are four types: **batch**, **interactive**, **output-only**, and **functional**. Based on scoring methods, there are two types: **with subtasks** and **without subtasks**.
 
 Batch problems
 **************
@@ -55,6 +55,42 @@ Interactive problems
 ********************
 
 For each test case, the contestant program interacts with the so-called **communicator** program. There is only test case input file. The communicator program also decides the test case verdict, based on the interaction result. See the **Helper files** section for more details on writing communicator program.
+
+Output-only problems
+********************
+
+For this problem, contestants do not submit their source code. Instead, they are given the input files (X.in), and they submit a zipped file containing the output files (X.out). Each of the submitted output file will be then checked against the judge's output file using simple diff or custom scorer, similar to what it is done in batch problems.
+
+Functional problems
+*******************
+
+This type of problem is explicitly created to support IOI problems since 2010. Here, contestants may submit more than one source files. In each source file, instead of reading the input froms stdin, they have to implement a function, and the input will be given as function arguments. At the moment, only C++11 language is supported.
+
+A functional problem consists of one or more submission "slots", which we will call "keys". For each key **X**, contestants must write a source file **X.cpp**, which should implement a function defined in **X.h**. For example, in IOI 2010 Cluedo, we have one key: **cluedo**, whereas for IOI 2010 Saveit, we have two keys: **encoder** and **decoder**. There are also two special files: **grader.cpp** and **grader.h**. These files are used both for grading and for contestants' testing.
+
+Usually, here is how to compile contestants' source files for testing:
+
+::
+
+    g++ -o grader grader.cpp <space-separated list of source files .cpp>
+
+For example,
+
+::
+
+    g++ -o grader grader.cpp encoder.cpp decoder.cpp
+
+How to set up
+-------------
+
+- Modify **grader.cpp** so that it outputs test case verdict in the format as explained in **Helper files**.
+- Upload the following files as helper files:
+
+    - grader.cpp
+    - grader.h
+    - All X.h, where X is a key (for example, {cluedo.h}, {encoder.h, decoder.h}
+
+- In the **Keys** field in Grading Config configuration, fill in comma-separated keys. For example: **cluedo** or **encoder,decoder**.
 
 Problems without subtasks
 *************************
