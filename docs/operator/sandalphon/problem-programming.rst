@@ -80,8 +80,7 @@ For example,
 
     g++ -o grader grader.cpp encoder.cpp decoder.cpp
 
-How to set up
--------------
+**How to set up**
 
 - Modify **grader.cpp** so that it outputs test case verdict in the format as explained in **Helper files**.
 - Upload the following files as helper files:
