@@ -1,6 +1,7 @@
 # Judgment Angels
 
 [![Documentation Status](https://readthedocs.org/projects/judgels/badge/?version=latest)](https://readthedocs.org/projects/judgels)
+[![Slack Status](https://slackin-judgels.herokuapp.com/badge.svg)](https://slackin-judgels.herokuapp.com/)
 
 ## Introduction
 
