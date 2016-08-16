@@ -144,7 +144,10 @@ def dist(repo):
 
     repo_version = read_file_to_string('{}/version.properties'.format(get_repo_dir(repo)))
 
-    execute('activator dist', get_repo_dir(repo))
+    if repo == 'gabriel':
+        execute('sbt universal:packageBin', get_repo_dir(repo))
+    else:
+        execute('activator dist', get_repo_dir(repo))
 
     dist_zip = '{}/target/universal/{}-{}.zip'.format(get_repo_dir(repo), repo, repo_version)
     dist_dest_dir = '{}/dist'.format(JUDGELS_HOME)
