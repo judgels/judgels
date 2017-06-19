@@ -21,7 +21,7 @@ Type
    The problem type.
 
 Slug
-   A "code" or "identifier" for the problem. The format is dash-separated words each consisting of lowercase letters. For example: **a-plus-b**, **tree-reconstruction**, etc.
+   A "code" or "identifier" for the problem. The format is dash-separated words each consisting of lowercase letters, numbers, or both. For example: **a-plus-b**, **tree-reconstruction**, **2sat-construction**, etc.
 
 Additional Note
    Any additional note. For example, problem tags, contests that have used the problems, etc.
